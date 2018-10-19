@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 10, 2017, 7:27:14 PM
+    Author     : danielunag
+*/
+
+/*.navbar{
+    display: flex;
+    align-items: center;
+}*/
+
+.navbar-toggle{
+    float: left;
+    margin-left: 10px;
+    color: white;
+    background-color: #4d4d4d;
+    border: none;
+    padding: 9px 5px;
+    background: rgba(51,45,35,0.7);
+}
+
+.navbar-toggle .icon-bar{
+    background-color: white !important;
+    height: 4px;
+    width: 28px;
+}
+
+.navbar-brand img.logocc{
+    width: 120px;
+    background: rgba(255, 255, 255, 0.9);
+}
+.navbar-brand img.logocc_m{
+    width: 155px;
+    display: none;
+}
+
+/*.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+@media(max-width:576px){
+}
+@media(max-width:767px){
+    .navbar-brand img{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media(min-width:768px){
+    .navbar{
+        height: 180px;
+    }
+}
+@media(min-width:992px){}
+@media(min-width:1200px){}*/
+
+@media (max-width: 767px) {
+    .navbar-collapse.collapse.in{
+    }
+
+    .navbar-fixed-top{
+        /*background-color: transparent;*/
+        border: none;
+    }
+
+    .the-main-navbar{
+        background-color: #f8f8f8;
+    }
+}

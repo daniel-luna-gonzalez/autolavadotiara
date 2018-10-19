@@ -1,0 +1,452 @@
+.background-todosxuno-home{
+    background: url(/media/images/campaign/todosxuno/Home.jpg);
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.todosxuno-home-header{
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    color: rgb(199,213, 81);
+    font-size: 30px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    background-color: rgba(60,167,194, .7);
+    z-index: 200;
+}
+
+.todosxuno-home-header-title{
+    width: 500px;
+}
+.todosxuno-home-header-logo{
+    position: absolute;
+    top: 10px;
+    left: 13%;
+}
+
+.todosxuno-home-header-logo-cause{
+    position: absolute;
+    top: 10px;
+    right: 13%;
+}
+
+.todosxuno-home-header-logo-cause img{
+    width: 60px;
+}
+
+
+
+.todosxuno-home-header-logo img{
+    width: 88px;
+    z-index: 200;
+}
+
+.todosxuno-home-central-column{
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    width: 50%;
+    background-color: rgba(200, 216, 68, .7);
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+
+.todosxuno-home-statistics{
+    position: relative;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-bottom: 100px;
+    height: 70%;
+}
+
+.todosxuno-home-statistics-container{
+    margin-bottom: 20px;
+}
+
+
+.todosxuno-home-footer{
+    height: 25%;
+    position: absolute;
+    bottom: 0px;
+    width: 690px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    background-color: rgba(60,167,194, .7);
+    z-index: 200;
+}
+
+.todosxuno-home-footer-title{
+    color: white;
+    top: 20px;
+    width: 90%;
+    margin:0 auto;
+    font-size:27px;
+    position: relative;
+}
+
+.todosxuno-home-donate-now{
+    width: 289px;
+    height: 137px;
+    background-color: rgba(200, 216, 68, 1);
+    position: absolute;
+    bottom: 0px;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+    color: white;
+    border-radius: 300px 300px 0 0;
+    cursor: pointer;
+}
+
+.todosxuno-home-donate-now .donate-now-info{
+    top: 40px;
+    position: relative;
+    font-size: 25px;
+    color: #000;
+    font-weight: bold;
+}
+
+.home-donate-now{
+    top: 50px;
+    position: relative;
+    font-size: 25px;
+}
+
+@media (max-width: 320px){
+    .todosxuno-home-header{
+        font-size: 12px;
+    }
+
+    .todosxuno-home-header-logo{
+        left: 2%;
+    }
+    .todosxuno-home-header-logo img{
+        width: 40px;
+    }
+
+    .todosxuno-home-header-logo-cause{
+        right: 2%;
+    }
+
+    .todosxuno-home-header-logo-cause img{
+        width: 20px;
+    }
+
+    .home .todosxuno-home-central-column{
+        width: 72%;
+    }
+
+    .home .todosxuno-home-statistics {
+        top: 55px;
+    }
+
+    .home .todosxuno-home-statistics-container{
+        margin-bottom: 10px;
+        font-size: 2em;
+    }
+
+    .todosxuno-home-footer{
+        height: 120px;
+        width: 80%;
+    }
+
+    .todosxuno-home-footer-title{
+        font-size:15px;
+    }
+    .todosxuno-home-donate-now .donate-now-info{
+        top: 20px;
+        font-size: 15px;
+    }
+
+    .home-donate-now{
+        top: 24px;
+        font-size: 20px;
+    }
+
+    .todosxuno-home-donate-now {
+        width: 100px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 568px) and (min-height: 321px) {
+    .todosxuno-home-header{
+        font-size: 14px;
+    }
+
+    .todosxuno-home-header-logo{
+        left: 2%;
+    }
+    .todosxuno-home-header-logo img{
+        width: 40px;
+    }
+
+    .todosxuno-home-header-logo-cause{
+        right: 2%;
+    }
+
+    .todosxuno-home-header-logo-cause img{
+        width: 20px;
+    }
+
+    .home .todosxuno-home-central-column{
+        width: 92%;
+    }
+
+    .home .todosxuno-home-statistics {
+        top: 55px;
+    }
+
+    .home .todosxuno-home-statistics-container{
+        margin-bottom: 10px;
+        font-size: 2em;
+    }
+
+    .todosxuno-home-footer{
+        height: 120px;
+        width: 80%;
+    }
+
+    .todosxuno-home-footer-title{
+        font-size:15px;
+    }
+    .todosxuno-home-donate-now .donate-now-info{
+        top: 20px;
+        font-size: 15px;
+    }
+
+    .home-donate-now{
+        top: 12px;
+        font-size: 20px;
+    }
+
+    .todosxuno-home-donate-now {
+        width: 100px;
+        height: 50px;
+    }
+}
+
+@media(max-width: 768px) and (min-width:569px){
+    .todosxuno-home-header{
+        font-size: 20px;
+    }
+
+    .todosxuno-home-header-logo{
+        left: 3%;
+    }
+    .todosxuno-home-header-logo img{
+        width: 80px;
+    }
+
+    .todosxuno-home-header-logo-cause{
+        right: 3%;
+    }
+
+    .todosxuno-home-header-logo-cause img{
+        width: 60px;
+    }
+
+    .home .todosxuno-home-central-column{
+        width: 60%;
+    }
+
+    .home .todosxuno-home-statistics {
+        top: 55px;
+    }
+
+    .home .todosxuno-home-statistics-container{
+        margin-bottom: 10px;
+        font-size: 2.5em;
+    }
+
+    .todosxuno-home-footer{
+        height: 165px;
+        width: 85%;
+    }
+
+    .todosxuno-home-footer-title{
+        font-size:18px;
+    }
+    .todosxuno-home-donate-now .donate-now-info{
+        top: 32px;
+        font-size: 25px;
+    }
+
+    .home-donate-now{
+        top: 40px;
+        font-size: 20px;
+    }
+
+    .todosxuno-home-donate-now {
+        width: 200px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+    .todosxuno-home-header{
+        font-size: 30px;
+    }
+
+    .todosxuno-home-header-logo{
+        top: 7px;
+        left: 7%;
+    }
+    .todosxuno-home-header-logo img{
+        width: 80px;
+    }
+
+    .todosxuno-home-header-logo-cause{
+        right: 7%;
+    }
+
+    .todosxuno-home-header-logo-cause img{
+        width: 60px;
+    }
+
+    .home .todosxuno-home-central-column{
+        width: 50%;
+    }
+
+    .home .todosxuno-home-statistics {
+        top: 55px;
+    }
+
+    .home .todosxuno-home-statistics-container{
+        margin-bottom: 10px;
+        font-size: 2.6em;
+    }
+
+    .todosxuno-home-footer{
+        height: 165px;
+        width: 65%;
+    }
+
+    .todosxuno-home-footer-title{
+        font-size:19px;
+    }
+    .todosxuno-home-donate-now .donate-now-info{
+        top: 33px;
+        font-size: 25px;
+    }
+
+    .home-donate-now{
+        top: 40px;
+        font-size: 20px;
+    }
+
+    .todosxuno-home-donate-now {
+        width: 230px;
+        height: 110px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 992px){
+    .todosxuno-home-header{
+        font-size: 30px;
+    }
+
+    .todosxuno-home-header-logo{
+        top: 7px;
+        left: 15%;
+    }
+    .todosxuno-home-header-logo img{
+        width: 100px;
+    }
+
+    .todosxuno-home-header-logo-cause{
+        right: 15%;
+    }
+
+    .todosxuno-home-header-logo-cause img{
+        width: 60px;
+    }
+
+    .home .todosxuno-home-central-column{
+        width: 515px;
+    }
+
+    .home .todosxuno-home-statistics {
+        top: 7px;
+    }
+
+    .home .todosxuno-home-statistics-container{
+        margin-bottom: 10px;
+        font-size: 3.3em;
+    }
+
+    .todosxuno-home-footer{
+        height: 23%;
+    }
+
+    .todosxuno-home-footer-title{
+        font-size:23px;
+    }
+    .todosxuno-home-donate-now .donate-now-info{
+        top: 36px;
+        font-size: 30px;
+    }
+
+    .home-donate-now{
+        top: 40px;
+        font-size: 20px;
+    }
+
+    .todosxuno-home-donate-now {
+        width: 250px;
+        height: 125px;
+    }
+}
+
+@media (min-width: 1281px){
+    .home .todosxuno-home-header{
+        font-size: 30px;
+    }
+
+    .home .todosxuno-home-header-logo{
+        top: 7px;
+        left: 23%;
+    }
+    .home .todosxuno-home-header-logo img{
+        width: 100px;
+    }
+
+    .todosxuno-home-header-logo-cause{
+        right: 23%;
+    }
+
+    .todosxuno-home-header-logo-cause img{
+        width: 60px;
+    }
+
+    .home .todosxuno-home-central-column{
+        width: 515px;
+    }
+
+    .home .todosxuno-home-statistics {
+        top: 7px;
+    }
+
+    .home .todosxuno-home-statistics-container{
+        margin-bottom: 10px;
+        font-size: 3.7em;
+    }
+
+    .todosxuno-home-donate-now {
+        width: 220px;
+        height: 105px;
+    }
+}

@@ -1,0 +1,273 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-mar-2017, 22:15:55
+    Author     : Daniel Luna <dluna>
+
+ // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px
+
+*/
+
+.background-preguntas{
+    background: url(/media/images/background-preguntas.jpg); 
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.preguntas-wrapper{
+    width: 90%;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px 10px;
+    padding: 10px;
+    color: white;
+    display: block;
+    max-width: 1200px;
+}
+
+.preguntas-title h1{
+    color: white;
+
+}
+
+.preguntas-accordion .panel-default .panel-heading:hover{
+    cursor: pointer;
+}
+
+.preguntas-accordion .panel-title{
+    color:black;
+}
+
+.panel-title span{
+    color: #E95D7E;
+}
+
+/*.panel-title .glyphicon-chevron-up {
+    display: none;
+}
+
+.panel-title .glyphicon-chevron-down {
+    display: inline-block;
+}*/
+
+.panel-heading.collapsed .glyphicon-chevron-up{
+    display: none;
+}
+
+.panel-heading:not(.collapsed) .glyphicon-chevron-up{
+    display: inline-block;
+}
+
+.panel-heading:not(.collapsed) .glyphicon-chevron-down{
+    display: none;
+}
+
+.panel-heading .glyphicon-chevron-down{
+    display: inline-block;
+}
+
+.panel-body{
+    color: black;
+}
+
+.preguntas-contacto-info{
+    color: #E95D7E;
+}
+
+.preguntas-info-icon img{
+    width: 140px;
+    height: 140px;
+}
+
+
+@media (max-width: 350px) {
+    .preguntas-wrapper{
+        width: 95%;
+        min-height: 80%;
+        margin-top: 10px;
+    }
+    .preguntas-title h1{
+        margin-top: 10px;
+        font-size: 2em;
+    }
+
+    .preguntas-info-icon img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .preguntas-accordion .panel-default .panel-heading .panel-title{
+        font-size: 1em;
+    }
+
+    .preguntas-accordion .panel-default .panel-body{
+        font-size: .9em;
+    }}
+
+@media (min-width: 350px) {
+    .preguntas-wrapper{
+        width: 95%;
+        min-height: 80%;
+        margin-top: 10px;
+    }
+    .preguntas-title h1{
+        margin-top: 10px;
+        font-size: 2em;
+    }
+
+    .preguntas-info-duda{
+        font-size: 1.1em;
+    }
+
+    .preguntas-info-icon img{
+        width: 80px;
+        height: 80px;
+    }
+
+    .preguntas-accordion .panel-default .panel-heading .panel-title{
+        font-size: 1em;
+    }
+
+    .preguntas-accordion .panel-default .panel-body{
+        font-size: .9em;
+    }
+}
+
+@media(min-width: 576px){
+    .preguntas-wrapper{
+        width: 75%;
+        min-height: 80%;
+        margin-top: 15px;
+    }
+    .preguntas-title h1{
+        margin-top: 0px;
+        font-size: 2.6em;
+    }
+
+    .preguntas-info-duda{
+        font-size: 1.5em;
+    }
+
+    .preguntas-info-icon img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .preguntas-accordion .panel-default .panel-heading .panel-title{
+        font-size: 1.2em;
+    }
+
+    .preguntas-accordion .panel-default .panel-body{
+        font-size: 1.1em;
+    }
+}
+
+
+@media (min-width: 768px) { 
+    .preguntas-wrapper{
+        width: 75%;
+        min-height: 50%;
+        margin-top: 15px;
+        overflow: no-display;
+    }
+    .preguntas-title h1{
+        margin-top: 15px;
+        font-size: 4em;
+    }
+
+    .preguntas-info-duda{
+        font-size: 1.5em;
+    }
+
+    .preguntas-info-icon img{
+        width: 130px;
+        height: 130px;
+    }
+
+    .preguntas-accordion .panel-default .panel-heading .panel-title{
+        font-size: 1.4em;
+    }
+
+    .preguntas-accordion .panel-default .panel-body{
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 992px){
+    .preguntas-wrapper{
+        width: 80%;
+        margin-top: 15px;
+        padding: 20px;
+        min-height: 40%;
+        overflow: no-display;
+
+    }
+    .preguntas-title h1{
+        margin-top: 36px;
+        font-size: 2.9em;
+    }
+
+    .preguntas-info-duda{
+        font-size: 1.1em;
+    }
+
+    .preguntas-info-icon img{
+        width: 140px;
+        height: 140px;
+    }
+
+    .preguntas-accordion .panel-default .panel-heading .panel-title{
+        font-size: 1.3em;
+    }
+
+    .preguntas-accordion .panel-default .panel-body{
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1280px){
+    .preguntas-wrapper{
+        width: 70%;
+        margin-top: 15px;
+        padding: 20px;
+        min-height: 40%;
+        overflow: no-display;
+
+    }
+    .preguntas-title h1{
+        margin-top: 36px;
+        font-size: 3.1em;
+    }
+
+    .preguntas-info-duda{
+        font-size: 1.2em;
+    }
+
+    .preguntas-info-icon img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .preguntas-accordion .panel-default .panel-heading .panel-title{
+        font-size: 1.4em;
+    }
+
+    .preguntas-accordion .panel-default .panel-body{
+        font-size: 1.3em;
+    }
+}

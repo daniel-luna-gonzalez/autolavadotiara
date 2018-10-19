@@ -1,0 +1,182 @@
+.sharefb-container{
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgb( 35, 161, 172);
+    height: 550px;
+}
+
+.sharefb-title{
+    color: rgb( 35, 161, 172);
+    font-size: 22px;
+    width: 80%;
+    padding: 5px;
+    background-color: white;
+    margin: 0 auto;
+    top: 30px;
+    position: relative;
+    border-radius: 60px 60px;
+    height: 102px;
+    text-align: center;
+}
+
+.sharefb-text-center{
+    color: rgb(210, 228, 74);
+    background-color: rgb(17, 45, 77);
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+}
+.sharefb-container .todosxuno-home-statistics{
+    top: 10px;
+    background-color: white;
+    display: flow-root;
+    width: 80%;
+    margin: 0 auto;
+}
+.sharefb-container .todosxuno-home-statistics-container{
+    font-size: 2em;
+}
+
+.sharefb-container .todosxuno-timeleft{
+    background-color: rgb(93, 166, 185);
+    padding: 1px;
+    margin-right: 5px;
+}
+
+.sharefb-container .todosxuno-current-amount{
+    background-color: rgb(51, 127, 189);
+    padding: 1px;
+    margin-right: 5px;
+}
+
+.sharefb-container .todosxuno-expected-amount{
+    background-color: rgb(214, 80, 79);
+    padding: 1px;
+    margin-right: 5px;
+}
+
+@media (max-width: 320px){
+    .sharefb-container{
+        width: 100%;
+    }
+    .sharefb-title {
+        font-size: 12px;
+        top: 7px;
+        height: 63px;
+    }
+    .sharefb-text-center{
+        font-size: 14px;
+        height: 35px;
+        margin-top: 14px;
+    }
+
+    .sharefb-container .todosxuno-home-statistics{
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 10px;
+        width: 95%;
+    }
+    .sharefb-container{
+        padding-bottom: 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 568px) and (min-height: 321px) {
+    .sharefb-container{
+        width: 100%;
+    }
+    .sharefb-title {
+        font-size: 12px;
+        top: 7px;
+        height: 63px;
+    }
+    .sharefb-text-center{
+        font-size: 14px;
+        height: 35px;
+        margin-top: 14px;
+    }
+
+    .sharefb-container .todosxuno-home-statistics{
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 10px;
+        width: 95%;
+    }
+
+    .sharefb-container{
+        padding-bottom: 20px;
+        height: auto;
+    }
+}
+
+@media(max-width: 768px) and (min-width:569px){
+    .sharefb-container{
+        width: 100%;
+    }
+    .sharefb-title {
+        font-size: 12px;
+        top: 7px;
+        height: 63px;
+        width: 300px;
+    }
+    .sharefb-text-center{
+        font-size: 14px;
+        height: 35px;
+        margin-top: 14px;
+    }
+
+    .sharefb-container .todosxuno-home-statistics{
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 10px;
+        width: 95%;
+    }
+
+    .sharefb-container{
+        padding-bottom: 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+    .sharefb-container{
+        width: 100%;
+    }
+    .sharefb-title {
+        font-size: 12px;
+        top: 7px;
+        height: 63px;
+        width: 300px;
+    }
+    .sharefb-text-center{
+        font-size: 14px;
+        height: 35px;
+        margin-top: 14px;
+    }
+
+    .sharefb-container .todosxuno-home-statistics{
+        padding-right: 0px;
+        padding-left: 0px;
+        font-size: 10px;
+        width: 95%;
+    }
+
+    .sharefb-container{
+        padding-bottom: 20px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 992px){
+
+}
+
+@media (min-width: 1281px){
+
+}

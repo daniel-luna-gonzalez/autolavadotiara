@@ -1,0 +1,429 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30-mar-2017, 21:13:17
+    Author     : Daniel Luna <dluna>
+*/
+.background-causas{
+    background: url(/media/images/background-causas.jpg) ; 
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.causas-slider{
+    width: 90%;
+    margin: 0 auto;
+    height: 50%;
+}
+
+.causas-title{
+    color:white;
+    font-size: 1em;
+}
+
+@media (max-width: 320px) {
+    .causas-slide-title{
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .wrapper-causas{
+        /*        top: 60px;
+                bottom: 60px;
+                height: 90%;
+                width: 100%;*/
+    }
+
+    .causas-slide{
+        padding: 0;
+        margin: 0;
+    }
+
+    .causas-slider{
+        width: 98%;
+        height: 80%;
+    }
+
+    .causas-slider .slide{
+        min-height: 300px;
+    }
+
+    .causas-slide .box{
+        z-index: 300;
+        display: table;
+        vertical-align:middle;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .causas-text-wrapper{
+        /*overflow-y: auto;*/
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .causas-slider .causas-slide{
+        font-size: 1em;
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        right: 0px;
+        color: white;
+        align-items: center;
+        justify-content:center;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 300;
+        /*display: table;*/
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .slide .image{
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        top: 0px;
+    }
+    .slide .image img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .causas-title{
+        font-size: .7em;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media(max-width: 576px) and (min-width:321px){
+    .causas-slide-title{
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    /*    .wrapper-causas{
+            top: 60px;
+            bottom: 60px;
+            height: 90%;
+            width: 98%;
+        }*/
+
+    .causas-slide{
+        padding: 0;
+        margin: 0;
+    }
+
+    .causas-slider{
+        width: 98%;
+        height: 80%;
+    }
+
+    .causas-slider .slide{
+        min-height: 400px;
+    }
+
+    .causas-slide .box{
+        z-index: 300;
+        display: table;
+        vertical-align:middle;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .causas-text-wrapper{
+        /*overflow-y: auto;*/
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .causas-slider .causas-slide{
+        font-size: 1.2em;
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        right: 0px;
+        color: white;
+        align-items: center;
+        justify-content:center;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 300;
+        /*display: table;*/
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .slide .image{
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        top: 0px;
+    }
+    .slide .image img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .causas-title{
+        font-size: .7em;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 577px) { 
+    .causas-slide-title{
+        font-size: 1.9em;
+        margin-bottom: 15px;
+    }
+
+    .wrapper-causas{
+        /*        top: 60px;
+                bottom: 60px;
+                height: 96%;
+                width: 98%;*/
+    }
+
+    .causas-slide{
+        padding: 0;
+        margin: 0;
+    }
+
+    .causas-slider{
+        width: 98%;
+        height: 80%;
+    }
+
+    .causas-slider .slide{
+        min-height: 500px;
+    }
+
+    .causas-slide .box{
+        z-index: 300;
+        display: table;
+        vertical-align:middle;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .causas-text-wrapper{
+        /*overflow-y: auto;*/
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    .causas-slider .causas-slide{
+        font-size: 1.4em;
+        position: absolute;
+        height: 100%;
+        left: 0px;
+        right: 0px;
+        color: white;
+        align-items: center;
+        justify-content:center;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 300;
+        /*display: table;*/
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .slide .image{
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        top: 0px;
+    }
+    .slide .image img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .causas-title{
+        font-size: .7em;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px){
+    .causas-slide-title{
+        font-size: 1.9em;
+    }
+
+    .causas-slide .box{
+        font-size: 13px;
+    }
+
+    .causas-slide{
+        padding: 0;
+        margin: 0;
+        height: 400px;
+        overflow-y: auto;
+    }
+
+    .slide .image{
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        height: 400px;
+    }
+
+    .causas-slide .box{
+        display: table;
+        height: 100%;
+        padding:0 25px;
+    }
+
+    .box.causas-bikur ul{padding: 0;}
+
+    .causas-text-wrapper{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .causas-slider .slide{
+    }
+
+    .causas .image img{
+        left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    max-width: none;
+    height: 100%;
+
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 993px){
+    .causas-slide-title{
+        font-size: 1.5em;
+    }
+
+    .causas-slide .box{
+        font-size: 13px;
+    }
+
+    .causas-slide{
+        padding: 0;
+        margin: 0;
+        height: 400px;
+        overflow-y: auto;
+    }
+
+    .slide .image{
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        height: 400px;
+    }
+
+    .causas-slide .box{
+        display: table;
+        height: 100%;
+        padding: 25px;
+    }
+
+    .causas-text-wrapper{
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .causas-slider .slide{
+    }
+
+    .causas .image img{
+        left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    max-width: none;
+    height: 100%;
+
+    }
+}
+
+@media (min-width: 1281px){
+    .causas-slider{
+        width: 1200px;
+        height: 500px;
+    }
+    .causas-slide-title{
+        font-size: 1.6em;
+    }
+
+    .causas-slide .box{
+        font-size: 12px;
+    }
+
+    .causas-slide{
+        padding: 0;
+        margin: 0;
+        height: 400px;
+        overflow-y: auto;
+    }
+
+    .slide .image{
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        height: 400px;
+        position: relative;
+    }
+
+    .causas-slide .box{
+        display: table;
+        height: 100%;
+    }
+
+    .causas-text-wrapper{
+        display: table-cell;
+        vertical-align: middle;
+        padding: 35px;
+    }
+
+    .causas-slider .slide{
+    }
+
+    .causas .image img{
+        left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    position: absolute;
+    max-width: none;
+    height: 100%;
+
+    }
+}

@@ -1,0 +1,969 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-mar-2017, 18:51:09
+    Author     : Daniel Luna <dluna>
+*/
+
+
+.background-donar{
+    background: url(/media/images/background-donar.jpg) ; 
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#donar .table-section {
+    /*background: rgba(0, 0, 0, 0.07);*/
+}
+
+.wrapper-donar{
+    color: white;
+}
+
+.wizard {
+    margin: 20px auto;
+    width: 70%;
+    /*background: #fff;*/
+}
+
+.wizard .nav-tabs {
+    position: relative;
+    margin: 0px auto;
+    margin-bottom: 0;
+    border: 0;
+}
+
+.wizard > div.wizard-inner {
+    position: relative;
+}
+
+.block-error-donor{
+    color: rgb(220,139,134) !important;
+}
+
+.has-error input{
+    background-color: rgb(251, 240, 240) !important;    
+}
+
+.donar-warning{
+    font-size: .8em;
+    margin-top: 10px;
+}
+
+.donar-warning-message{
+    font-size:  1em;
+}
+
+.connecting-line {
+    height: 2px;
+    background: #E95D7E;;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 5px;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.connecting-completed{
+    height: 2px;
+    background: #E95D7E;
+    position: absolute;
+    width: 29%;
+    /*margin: 0 auto;*/
+    left: 11%;
+    /*right: 11%;*/
+    top: 50%;
+    z-index: 2;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+span.round-tab {
+    width: 30px;
+    height: 30px;
+    line-height: 26px;
+    display: inline-block;
+    border-radius: 100px;
+    /*    background: #fff;*/
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+
+span.round-tab i{
+    color:#555555;
+}
+
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #E95D7E;
+    color: white;
+    background-color: #E95D7E;
+}
+.wizard li span.round-tab {
+    background-color: white;
+    border: 2px solid #E95D7E;
+    color: #E95D7E;
+}
+
+span.round-tab:hover {
+    color: #333;
+    border: 2px solid #333;
+}
+
+.wizard .nav-tabs > li {
+    width: 20%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #5bc0de;
+    transition: 0.1s ease-in-out;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 42%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 1px;
+    border: 10px solid transparent;
+    border-bottom-color: #E95D7E;
+}
+
+.wizard .nav-tabs > li a {
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.wizard .nav-tabs > li a:hover {
+    background: transparent;
+    border: 0;
+}
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 5px;
+    /*height: 100%;*/
+}
+
+.wizard h3 {
+    margin-top: 0;
+}
+
+.tab-content{
+    display: inline-block;
+    /*background-color: black;*/
+    background: rgba(0,0,0,0.35);
+    border-radius: 10px 10px;
+    /*height: 100%;*/
+    /*overflow-y: auto;*/
+    width: 100%;
+}
+
+button.donation-amount{
+    background-color: white;
+    color: #E95D7E;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;   
+    font-size: 15px;
+}
+
+button.donation-amount.active{
+    background-color: #E95D7E;
+    color: white;
+    font-weight: bold;
+}
+
+button.donation-amount:hover{
+    background-color: #E95D7E;
+    color: white;
+
+}
+
+.donationDescription{
+    font-size: 19px;
+}
+
+p.donacion-tab-title{
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.donation-amount .help-block{
+    top: 36px;
+    display: -moz-grid-group;
+    position: absolute;
+    font-size: 10px;
+    color: white;
+}
+
+input.donation-amount{
+    background-color: white;
+    color: #E95D7E;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+input.donation-amount.active{
+    background-color: #E95D7E;
+    color: white;
+    font-weight: bold;
+}
+
+input.donation-amount:hover{
+    background-color: #E95D7E;
+    color: white;
+
+}
+
+button.donar-button-next{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button.donar-button-next{
+    background-color: #E95D7E;
+    color: white;
+    font-size: 18px;
+    border: 0;
+}
+
+button.donar-button-next:hover{
+    background-color: white;
+    color: #E95D7E;
+}
+
+.donar-thanks-donor{
+    display: none;  
+}
+
+.donar-thanks-donor .donar-info{
+    color: #979796;
+}
+
+.donar-info .donar-info-gracias{
+    font-size: 3.6em;
+}
+
+.donar-share img{
+    width:  60px;
+}
+
+.donar-share p{
+    color:  white;
+    cursor: pointer;
+}
+
+.donar-info .donar-info-apoyo{
+    font-size: 1.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.donar-info .donar-info-recibo{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.donar-thanks-donor .donor-thanks-logo img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.donar-info-hr-tu-tambien{
+    color: white;
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+}
+
+.donar-info-hr-tu-tambien h1{
+    font-size: 4em;
+}
+
+.donar-montos-info{
+    font-size: 1em;
+}
+
+
+.donar-monto-amount-info{
+    color: #E95D7E;
+    font-weight: bold;
+}
+
+.causas-info{
+    font-size: .9em;
+}
+
+.donar-checkbox-causas img{
+    width: 50px;
+    height: 50px;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -ms-animation: spin .7s infinite linear;
+    -webkit-animation: spinw .7s infinite linear;
+    -moz-animation: spinm .7s infinite linear;
+}
+
+.cc-container{
+
+}
+
+.transparent {
+    opacity: 0.2;
+}
+
+.wrapper-cc-containe{
+    display: table;
+}
+
+.cc-container{
+    display: table-cell;
+    vertical-align: bottom;
+    height: 60px;
+}
+
+.cc-container img{
+    width: 50px;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+@-webkit-keyframes spinw {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes spinm {
+    from { -moz-transform: rotate(0deg);}
+    to { -moz-transform: rotate(360deg);}
+}
+
+
+@media (max-width: 320px){   
+    .donor-title h1{
+        font-size: 2em;
+    }
+    .wrapper-donar{
+        /*position: absolute;*/
+        top:20px;
+        bottom: 20px;
+        width: 100%;
+/*        overflow-y: auto;*/
+    }
+
+    .wrapper-pago-button{
+        /*        position: absolute;
+                width: 100%;
+                bottom: -17px;*/
+        height: 54px;
+        margin-top: 15px;
+    }
+
+    .wrapper-pago-button.info{
+        height: 103px;
+    } 
+
+    .sub-wrapper{
+        width: 100%;
+        display: grid;
+    }
+
+    .tab-content{
+        width: 99%;
+    }
+
+    .wizard {
+        margin: 10px auto;
+        width:95%;
+
+    }
+
+    .tab-content.monto{
+        height: 53%;
+    }
+
+    .wizard li.active:after {
+        left: 30%;
+    }
+
+    .connecting-line {
+        top: 45%;
+    }
+
+    .wizard .nav-tabs {
+        margin: 3px auto;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 20px;
+        height: 20px;
+        margin: 7px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    .cc-container{
+        vertical-align: middle;
+    }
+
+    .donationDescription {
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
+
+    span.round-tab {
+        width: 20px;
+        height: 20px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    button.donation-amount {
+        font-size: 12px;
+    }
+
+    button.donar-button-next {
+        font-size: 14px;
+    }
+
+    .donar-info .donar-info-gracias{
+        font-size: 1.3em;
+    }
+    .donar-info .donar-info-gracias{
+        font-size: 1.2em;
+    }
+
+    .donar-info .donar-info-apoyo{
+        font-size: .7em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info .donar-info-recibo{
+        font-size: .6em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .donar-thanks-donor .donor-thanks-logo img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .donar-info-hr-tu-tambien h1{
+        font-size: 2em;
+    }
+
+    .donationDescription{
+        font-size: .9em;
+    }
+
+    .donar-montos-info{
+        font-size: 0.7em;
+    }
+
+    .donar-button-next{
+        min-width: 70px;
+        min-height: 30px;
+    }
+
+    p.donacion-tab-title{
+        font-size: 1.2em;
+        text-align: left;
+        margin-bottom: 3px;
+        margin-top: 5px;
+    }
+
+    .donar-recibo-datos label {
+        font-size: 12px;
+    } 
+
+    .donar-recibo-datos .form-group{
+        margin-bottom: 1px;
+    }
+
+    .payment-information-container .form-group{
+        margin-bottom: 0px;
+    }
+
+    .personal-data-container .form-group{
+        margin-bottom: 3px;
+        padding-right: 5px;
+        padding-left: 3px;
+    }
+
+    .personal-data-container .checkbox{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    
+    .wrapper-donor .form-control{
+        height:  30px;
+    }
+
+}
+
+@media (max-width: 568px) and (min-height: 321px) {
+    .donor-title h1{
+        font-size: 2em;
+    }
+
+    .wrapper-donar{
+        /*position: absolute;*/
+        top:20px;
+        bottom: 20px;
+        width: 100%;
+/*        overflow-y: auto;*/
+    }
+
+    .wrapper-pago-button{
+        height: 54px;
+        margin-top: 15px;
+    }
+
+    .wrapper-pago-button.info{
+        height: 103px;
+    } 
+
+    .sub-wrapper{
+        display: grid;
+    }
+
+    .tab-content.monto{
+        height: 53%;
+    }
+
+    .wizard > div.wizard-inner {
+        height: 15%;
+    }
+
+    .wizard li.active::after {
+        left: 25%;
+    }
+
+    .connecting-line {
+        top: 47%;
+    }
+
+    .wizard .nav-tabs {
+        margin: 3px auto;
+    }
+
+    .wizard {
+        width: 93%;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 20px;
+        height: 20px;
+        margin: 11px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    .cc-container{
+        vertical-align: middle;
+    }
+
+    .cc-container img {
+        width: 50px;
+    }
+
+    .donationDescription {
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 7px;
+        font-size: 1.2em;
+    }
+
+    span.round-tab {
+        width: 20px;
+        height: 20px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    button.donation-amount {
+        font-size: 12px;
+    }
+
+    button.donar-button-next {
+        font-size: 14px;
+    }
+
+    .donar-info .donar-info-gracias{
+        font-size: 1.3em;
+    }
+
+    .donar-info .donar-info-apoyo{
+        font-size: .8em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info .donar-info-recibo{
+        font-size: .7em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .wizard li.active::after {
+        left: 35%;
+        bottom: -2px
+    }
+}
+
+@media(max-width: 768px) and (min-width:569px){
+    .wizard {
+        width: 80%px;
+    }
+
+    .donor-title h1{
+        font-size: 3em;
+    }
+
+    .wrapper-donar{
+        /*position: absolute;*/
+        top:20px;
+        bottom: 20px;
+        width: 100%;
+/*        overflow-y: auto;*/
+    }
+
+    .wrapper-pago-button{
+
+        height: 54px;
+        margin-top: 15px;
+    }
+
+    .wrapper-pago-button.info{
+        height: 103px;
+    } 
+
+    .cc-container{
+        height: auto;
+    }
+
+    .sub-wrapper{
+        display: grid;
+    }
+
+    .tab-content.monto{
+        height: 53%;
+    }
+
+    .wizard{
+        width:95%;
+    }
+
+    .wizard > div.wizard-inner {
+        height: 15%;
+    }
+
+    .tab-content{
+        /*height: 76%;*/
+    }
+
+    .wizard li.active::after {
+        left: 25%;
+    }
+
+    .connecting-line {
+        top: 48%;
+    }
+
+    .wizard .nav-tabs {
+        margin: 3px auto;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 20px;
+        height: 20px;
+        margin: 20px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    .donationDescription {
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 7px;
+         font-size: 1.2em;
+    }
+
+    span.round-tab {
+        width: 20px;
+        height: 20px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    button.donation-amount {
+        font-size: 12px;
+    }
+
+    button.donar-button-next {
+        font-size: 14px;
+    }
+
+    .donar-info .donar-info-gracias{
+        font-size: 1.3em;
+    }
+
+    .donar-info .donar-info-apoyo{
+        font-size: .8em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info .donar-info-recibo{
+        font-size: .7em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .donar-thanks-donor .donor-thanks-logo img{
+        width: 130px;
+        height: 130px;
+    }
+
+    .donar-info-hr-tu-tambien h1{
+        font-size: 2.1em;
+    }
+
+    .donar-montos-info{
+        font-size: 0.7em;
+    }
+
+    .donar-recibo-datos .form-group{
+        margin-bottom: 1px;
+    }
+
+    .personal-data-container .form-group{
+        /*        margin-bottom: 3px;
+                padding-right: 5px;
+                padding-left: 3px;*/
+    }
+
+    .personal-data-container .checkbox{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+    .personal-data-container .form-control{
+        font-size: 13px;
+        /*        height: 30px;*/
+    }
+
+    .personal-data-container label{
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 991px) and (min-width: 769px) { 
+    .wizard {
+        width: 600px;
+    }
+
+    .donor-title h1{
+        font-size: 3em;
+    }
+    .wrapper-donar{
+        /*position: absolute;*/
+        top:20px;
+        bottom: 40px;
+        width: 100%;
+        /*overflow-y: auto;*/
+    }
+
+    .wrapper-pago-button{
+        /*        position: absolute;
+                width: 100%;
+                bottom: -17px;*/
+        height: 54px;
+        margin-top: 15px;
+    }
+
+    .wrapper-pago-button.info{
+        height: 103px;
+    } 
+
+    .cc-container img{
+        width: 36px;
+    }
+
+
+    .sub-wrapper{
+        /*        position: absolute;
+                bottom: 40px;
+                top: 0px; */
+        width: 100%;
+        display: grid;
+    }
+
+    .tab-content.monto{
+        height: 53%;
+    }
+
+    .wizard > div.wizard-inner {
+        height: 15%;
+    }
+
+    .wizard li.active::after {
+        left: 25%;
+    }
+
+    .connecting-line {
+        top: 47%;
+    }
+
+    .wizard .nav-tabs {
+        margin: 3px auto;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 20px;
+        height: 20px;
+        margin: 20px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    .donationDescription {
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 7px;
+    }
+
+    span.round-tab {
+        width: 20px;
+        height: 20px;
+        line-height: 15px;
+        font-size: 14px;
+    }
+
+    button.donation-amount {
+        font-size: 12px;
+    }
+
+    button.donar-button-next {
+        font-size: 14px;
+    }
+
+    .donar-info .donar-info-gracias{
+        font-size: 1.3em;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 20px;
+        height: 20px;
+        line-height: 17px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 20px;
+        height: 20px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 42%;
+        bottom: -2px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 992px){
+    .wizard {
+        width: 600px;
+    }
+    .donor-title h1{
+        font-size: 4em;
+    }
+
+    .donar-info .donar-info-gracias{
+        font-size: 2.5em;
+    }
+
+    .donar-info .donar-info-apoyo{
+        font-size: 1.3em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info .donar-info-recibo{
+        font-size: 1.2em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info-hr-tu-tambien h1{
+        font-size: 2.6em;
+    }
+}
+
+@media (min-width: 1281px){
+    .wizard {
+        width: 600px;
+    }
+
+    .donar-info .donar-info-gracias{
+        font-size: 3.4em;
+    }
+
+    .donar-info .donar-info-apoyo{
+        font-size: 1.6em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info .donar-info-recibo{
+        font-size: 1.5em;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .donar-info-hr-tu-tambien h1{
+        font-size: 2.8em;
+    }
+}

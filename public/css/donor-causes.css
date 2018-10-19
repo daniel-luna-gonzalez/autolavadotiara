@@ -1,0 +1,117 @@
+.select-all-causes{
+    width: 40px;
+    margin-right: 10px;
+}
+.all-selected{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 50%;
+    cursor: pointer;
+}
+.all-selected.hover{
+    border: #E95D7E solid 2px;
+    background-color: rgba(255, 255, 255, .2);
+}
+.all-selected.hover img.check-select-all{
+    display: block;
+    opacity: .6;
+}
+.all-selected.checked{
+    border: #E95D7E solid 2px;
+    background-color: rgba(255, 255, 255, .2);
+}
+.wrapper-cause-box{
+    height: 180px;
+    cursor: pointer;
+}
+.wrapper-cause-box.checked{
+    border: #E95D7E solid 2px;
+    background-color: rgba(255, 255, 255, .2);
+}
+.wrapper-cause-box.hover{
+    border: #E95D7E solid 2px;
+    background-color: rgba(255, 255, 255, .2);
+}
+.wrapper-cause-box.hover img.check-mark{
+    display: block;
+    opacity: .6;
+}
+.wrapper-image-cause{
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper-text-cause{
+    height: 40%;
+    text-align: center;
+    font-size: .9em;
+}
+img.check-mark{
+    position: absolute;
+    width: 60px;
+    margin: 0 auto;
+    display: none;
+}
+img.check-select-all{
+    position: absolute;
+    top:17px;
+    width: 60px;
+    margin: 0 auto;
+    display: none;
+}
+.all-selected.checked img{
+    display: block;
+}
+.wrapper-cause-box.checked img{
+    display: block;
+}
+
+.all-selected-image.checked img{
+    display: block;
+}
+
+@media (max-width: 320px) {
+    .all-selected{
+        width: 80%;
+    }
+    .wrapper-text-cause{
+        font-size: .6em;
+    }
+    .wrapper-cause-box{
+        height: 120px;
+    }
+}
+
+
+@media(max-width: 576px) and (min-width:321px){
+    .all-selected{
+        width: 80%;
+    }
+    .wrapper-text-cause{
+        font-size: .6em;
+    }
+    .wrapper-cause-box{
+        height: 120px;
+    }
+}
+
+
+@media (max-width: 768px) and (min-width: 577px) {
+
+}
+
+@media (max-width: 992px) and (min-width: 769px){
+
+}
+
+@media (max-width: 1280px) and (min-width: 993px){
+
+}
+
+@media (min-width: 1281px){
+
+}

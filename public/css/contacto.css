@@ -1,0 +1,255 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26-mar-2017, 15:50:17
+    Author     : Daniel Luna <dluna>
+*/
+
+.background-contacto{
+    background: url(/media/images/background-contacto.jpg); 
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.contacto-title{
+    font-size: 3em;
+    color:white;
+}
+.panel-contacto{
+    width: 80%;
+    /*    height: 40%;*/
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px 10px;
+    color: white;
+    margin: auto;
+    display: inline-block;
+    max-width: 1200px;
+    position: relative;
+}
+
+.pengostores{
+    margin-top: 20px;
+    height: 40px;
+    width: 240px;
+    margin: 15px auto;
+}
+
+.pengostores img{
+    width: 180px;
+    height: 60px;
+}
+
+#formContact{
+    text-align: left;
+}
+
+.contacto-icon img{
+    width: 90px;
+    height: 90px;
+}
+
+.contacto-button{
+    background-color: #E95D7E;
+    color: white;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contacto-cen{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.contacto-left{
+    float: right;
+}
+
+.contact-info{
+    margin-bottom: 8px;
+    display: none;
+}
+
+@media (min-height:200px) and  (max-height: 320px){
+    .panel-contacto{
+        width: 94%;
+    }    
+    .main-wrapper-contacto{
+        top: 50px;
+        /*position: absolute;*/
+        bottom: 15px;
+        left: 15px;
+        right: 10px;
+    }
+    .contacto-title {
+        font-size: 2.5em !important;
+    }
+
+    .panel-contacto{
+        top: 40px;
+        /*position: absolute;*/
+        bottom: 40px;
+        height: auto;
+    }
+
+    .pengostores img{
+        width: 80px;
+        height: 30px;
+    }
+
+}
+
+@media (max-width: 321px) and (min-width: 200px) {
+    .panel-contacto{
+        width: 94%;
+    }    
+    .main-wrapper-contacto{
+        top: 50px;
+        /*position: absolute;*/
+        bottom: 15px;
+        left: 15px;
+        right: 10px;
+    }
+    .contacto-title {
+        font-size: 2.5em !important;
+    }
+
+    .panel-contacto{
+        top: 40px;
+        /*position: absolute;*/
+        bottom: 40px;
+        height: auto;
+    }
+
+    .wrapper-pengo{
+        /*position: absolute;*/
+/*        bottom: 0px;
+        height: 37px;*/
+    }
+
+    .pengostores{
+        /*display: flex;*/
+    }
+
+    .pengostores img{
+        width: 80px;
+        height: 30px;
+    }
+}
+
+@media(max-width: 576px) and (min-width:321px){
+    .contacto-cen{
+    top: 0;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    position: static;
+}
+        .panel-contacto{
+        width: 94%;
+    }    
+    .main-wrapper-contacto{
+        top: 50px;
+        /*position: absolute;*/
+        bottom: 15px;
+        left: 15px;
+        right: 10px;
+    }
+    .contacto-title {
+        font-size: 2.5em !important;
+    }
+
+    .panel-contacto{
+        top: 40px;
+        /*position: absolute;*/
+        bottom: 40px;
+        height: auto;
+    }
+    
+    .wrapper-pengo{
+        /*position: absolute;*/
+/*        bottom: 0px;
+        height: 37px;*/
+        margin-top: 6%;
+    }
+
+    .pengostores{
+        /*display: flex;*/
+    }
+
+    .pengostores img{
+        width: 80px;
+        height: 27px;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 577px) { 
+
+    .contacto-cen{
+        top: 0;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        position: static;
+
+    }
+
+        .panel-contacto{
+        width: 94%;
+    }    
+    .main-wrapper-contacto{
+        top: 50px;
+        /*position: absolute;*/
+        bottom: 15px;
+        left: 15px;
+        right: 10px;
+    }
+    .contacto-title {
+        font-size: 2.5em !important;
+    }
+
+    .panel-contacto{
+        top: 40px;
+        /*position: absolute;*/
+        bottom: 40px;
+        height: auto;
+    }
+    
+    .wrapper-pengo{
+        /*position: absolute;*/
+/*        bottom: 0px;
+        height: 37px;*/
+        margin-top: 6%;
+    }
+
+    .pengostores{
+        /*display: flex;*/
+    }
+
+    .pengostores img{
+        width: 80px;
+        height: 27px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px){
+
+}
+
+@media (max-width: 1280px) and (min-width: 993px){
+
+}
+
+@media (min-width: 1281px){
+
+}

@@ -1,0 +1,124 @@
+.background-donadores{
+    background-color: rgb(55,80,120);
+}
+.main-wrapper-donadores{
+    position: relative;
+    /*width:100%;*/
+    height: 100%;
+}
+.donor-brick{
+    padding: 8px 20px;
+    display: inline-block;
+    color: rgb(28, 61, 103);
+    background-color: rgb(186,162,119);
+    margin: 5px;
+    border: rgb(55,94,168) solid 5px;
+    font-size: 1em;
+}
+
+.wrapper-title-wall{
+
+}
+.brick-icon{
+    position: relative;
+    top: 0px;
+}
+
+.donadores-info-text{
+    color: white;
+}
+@media (min-height:200px) and  (max-height: 320px){
+    .donor-brick{
+        font-size: .5em;
+        padding: 4px 4px;
+        margin: 2px;
+    }
+
+    .brick-icon{
+        width: 28px;
+        left: 100px;
+    }
+
+    .donadores-info-text{
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 321px) and (min-width: 200px) {
+    .donor-brick{
+        font-size: .5em;
+        padding: 4px 4px;
+        margin: 2px;
+    }
+
+    .brick-icon{
+        width: 28px;
+        left: 100px;
+    }
+    .donadores-info-text{
+        font-size: .7em;
+    }
+}
+
+@media(max-width: 576px) and (min-width:321px){
+    .donor-brick{
+        font-size: 0.6em;
+        padding: 5px 9px;
+        margin: 2px;
+    }
+    .brick-icon{
+        width: 50px;
+        left: 120px;
+    }
+    .donadores-info-text{
+        font-size: .8em;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 577px) {
+    .donor-brick{
+        font-size: .9em;
+        padding: 7px 16px;
+        margin: 3px;
+    }
+    .brick-icon{
+        width: 80px;
+        left: 250px;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 769px){
+    .donor-brick{
+        font-size: .9em;
+        padding: 7px 16px;
+        margin: 3px;
+    }
+    .brick-icon{
+        width: 100px;
+        left: 300px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 993px){
+    .donor-brick{
+        font-size: .9em;
+        padding: 7px 16px;
+        margin: 3px;
+    }
+    .brick-icon{
+        width: 100px;
+        left: 300px;
+    }
+}
+
+@media (min-width: 1281px){
+    .donor-brick{
+        font-size: 1em;
+        padding: 7px 16px;
+        margin: 3px;
+    }
+    .brick-icon{
+        width: 100px;
+        left: 300px;
+    }
+}

@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19-mar-2017, 10:15:34
+    Author     : Daniel Luna <dluna>
+*/
+.quienes-somos-background{
+    background: url(/media/images/background-quienes-somos.jpg) ; 
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.quienes-somos-wrapper{
+    color: white;
+    width: 98%;
+    margin: 0 auto;
+}
+
+.quienes-somos{
+/*    width: 100%;
+    height: 100% !important;*/
+}
+
+@media (max-width: 320px) and (min-width: 200px) {
+/*    .quienes-somos-wrapper h1{
+        font-size: 2em;
+    }*/
+}
+
+@media(max-width: 576px) and (min-width:321px){
+/*    .quienes-somos-wrapper h1{
+        font-size: 2.5em;
+    }*/
+}
+
+@media (max-width: 768px) and (min-width: 577px) { 
+    .quienes-somos-wrapper{
+        color: white;
+        width: 90%;
+    }
+/*    .quienes-somos-wrapper h1{
+        font-size: 3.0em;
+    }*/
+}
+
+@media (max-width: 992px) and (min-width: 769px){
+    .quienes-somos-wrapper{
+        color: white;
+        width: 95%;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 993px){
+    .quienes-somos-wrapper{
+        color: white;
+        width: 90%;
+    }
+}
+
+@media (min-width: 1281px){
+    .quienes-somos-wrapper{
+        width: 1000px;
+    }
+    .quienes-somos-wrapper{
+        color: white;
+        width: 1000px;
+    }
+}

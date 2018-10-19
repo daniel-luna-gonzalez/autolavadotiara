@@ -1,0 +1,56 @@
+require.config({
+    baseUrl: './',
+    paths: {
+        jquery: 'apis/jquery-3.1.1.min',
+        bootstrap: 'apis/bootstrap/js/bootstrap.min',
+        'bootstrap-dialog': 'apis/bootstrap3-dialog/js/bootstrap-dialog',
+        'bootstrap-toggle':'apis/bootstrap-toggle/js/bootstrap-toggle.min',
+        'bootstrap-datetimepicker': 'apis/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min',
+//        parallax: 'apis/parallax/parallax.min',
+        creative: 'js/creative',
+//        pagepiling: 'apis/pagepiling/jquery.pagepiling.min',
+        easing: 'apis/scrolling-nav/js/jquery.easing.min',
+        scrolling: 'apis/scrolling-nav/js/scrolling-nav',
+        donar: "js/donar",
+        testimoniales: "js/testimoniales",
+        causas: "js/causas",
+        "porquedonar": "js/porquedonar",
+        contacto: 'js/contacto',
+        donors: 'js/donors',
+        messages: 'js/messages',
+        paypal: 'js/paypal',
+        alerts: 'js/alerts',
+        validation: 'js/validation',
+        Conekta: 'js/conekta',
+        modernizr: 'apis/paymentInfo/assets/scripts/libs/modernizr',
+        "jquery.bxslider": "apis/jquery.bxslider/jquery.bxslider",
+        'jquery.inputmask': 'apis/paymentInfo/assets/scripts/libs/jquery.inputmask',
+        'jquery.inputmask.date.extensions': 'apis/paymentInfo/assets/scripts/libs/jquery.inputmask.date.extensions',
+        'app': 'apis/paymentInfo/assets/scripts/app',
+        'jquery-ui-datepicker': 'apis/jquery-ui/jquery-ui',
+        'jquery-payform': 'apis/jquery-payform/js/jquery.payform.min'
+        
+    },
+    shim: {
+        jquery: {
+            exports: 'jQuery'
+        },
+        "bootstrap": {"deps": ['jquery']},
+        'bootstrap-dialog': ['jquery','bootstrap'],
+        'bootstrap-toggle': {deps: ['bootstrap','jquery']},
+        'bootstrap-datetimepicker': {deps: ['jquery', 'bootstrap']},
+        parallax: {"deps": ['jquery']},
+        'ScrollReveal': {"deps": ['jquery']},
+        'creative': {"deps": ['jquery']},
+        'pagepiling': {"deps": ['jquery']},
+        'jquery.inputmask': {"deps": ['modernizr','jquery']},
+        'jquery.inputmask.date.extensions': {"deps": ['modernizr','jquery', 'jquery.inputmask']},
+        'app': {"deps": ['modernizr', 'jquery', 'jquery.inputmask', 'jquery.inputmask.date.extensions']},
+        'donar': {"deps": ['jquery', 'Conekta', 'app']},
+        "jquery.bxslider": {"deps": ["jquery"]},
+        "scrolling": {"deps": ["jquery", "easing"]},
+        "jquery-ui-datepicker": {"deps": ["jquery", "easing"]},
+        'jquery-payform': {"deps": ["jquery"]}
+    },
+    waitSeconds: 200
+});

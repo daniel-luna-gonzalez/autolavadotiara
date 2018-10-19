@@ -1,0 +1,112 @@
+.todosxuno-timeleft{
+    background-color: rgb(93, 166, 185);
+    padding: 1px;
+    margin-right: 5px;
+}
+
+.todosxuno-current-amount{
+    background-color: rgb(51, 127, 189);
+    padding: 1px;
+    margin-right: 5px;
+}
+
+.todosxuno-expected-amount{
+    background-color: rgb(214, 80, 79);
+    padding: 1px;
+    margin-right: 5px;
+}
+
+.counter .todosxuno-home-statistics{
+    /*top:120px;*/
+    position: relative;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 20px;
+    height: 70%;
+}
+
+.counter .todosxuno-home-statistics-container{
+    margin-bottom: 20px;
+    font-size: 4em;
+}
+
+.todosxuno-home-central-column .expected-amount-container{
+}
+
+.todosxuno-home-central-column .expected-amount-container label{
+    color: white;
+}
+
+.todosxuno-home-central-column .current-amount-container{
+
+}
+
+.todosxuno-home-central-column .current-amount-container label{
+    text-align: left;
+    color: white;
+}
+
+.todosxuno-home-central-column .time-left-container{
+
+}
+
+.todosxuno-home-central-column .time-left-container label{
+    text-align: left;
+    color: white;
+}
+
+@media (max-width: 320px){
+    .hazlorealidad.todosxuno-header {
+        font-size: 10px;
+    }
+
+    .todosxuno-timeleft{
+        margin-right: 2px;
+    }
+
+    .todosxuno-current-amount{
+        margin-right: 2px;
+    }
+
+    .todosxuno-expected-amount{
+        margin-right: 2px;
+    }
+}
+
+@media (max-width: 568px) and (min-height: 321px) {
+    .todosxuno-timeleft{
+        margin-right: 3px;
+    }
+
+    .todosxuno-current-amount{
+        margin-right: 3px;
+    }
+
+    .todosxuno-expected-amount{
+        margin-right: 3px;
+    }
+}
+
+@media(max-width: 768px) and (min-width:569px){
+
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+
+}
+
+@media (max-width: 1280px) and (min-width: 992px){
+    .counter .todosxuno-home-statistics-container{
+        margin-bottom: 15px;
+        font-size: 3.5em;
+
+    }
+}
+
+@media (min-width: 1281px){
+    .counter .todosxuno-home-statistics-container{
+        margin-bottom: 20px;
+        font-size: 4em;
+
+    }
+}

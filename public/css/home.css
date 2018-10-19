@@ -1,0 +1,210 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-mar-2017, 22:57:12
+    Author     : Daniel Luna <dluna>
+*/
+
+.background-home{
+    background: url(/media/images/background-home.jpg) ; 
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+div.home-title h1{
+    color: white;
+    text-align: center;
+    margin-top: 45px;
+}
+
+div.home-subtitle h2{
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+div.home-subtitle2 h3{
+    margin-top: 7px;
+    color: white;
+    text-align: center;
+}
+
+div.home-information{
+    margin: 0 auto;
+    width: 80%;
+    /*background-color: black;*/
+    /*opacity: .5;*/
+    background: rgba(0,0,0,0.35);
+    display: inline-block;
+    margin-top: 7px;
+    border-radius: 10px 10px;
+    margin-bottom: 40px;
+    padding: 0 0 10px;
+}
+
+.home-information .home-info-text{
+    margin-top: 6px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1em;
+}
+
+.home-information .home-info-section{
+    opacity: 1;
+    color: white;
+    overflow: hidden;
+    height: 100%;
+    min-height: 110px;
+}
+
+.home-info-section{
+    display: inline-block;
+    margin-right: 4px;
+    margin-left: 4px;
+}
+.home-info-section span img{
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 350px) {
+    div.home-information{
+        width: 90%;
+    }
+    
+    div.home-title h1{
+        font-size: 4.3em;
+    }
+
+    div.subtitle h2{
+        font-size: 1.6em;
+    }
+
+    div.subtitle2 h3{
+        font-size: 1.4em;
+    }
+
+    .home-info-section{
+        margin-right: 6px;
+        margin-left: 6px;
+        width: 70px;
+        height: 60px;
+    }
+}
+
+@media (min-width: 351px) {
+    div.home-information{
+        width: 91%;
+    }
+    
+    div.home-title h1{
+        font-size: 5.2em;
+    }
+
+    div.home-subtitle h2{
+        font-size: 1.6em;
+    }
+
+    div.home-subtitle2 h3{
+        font-size: 1.4em;
+    }
+
+    .home-info-section{
+        margin-right: 7px;
+        margin-left: 7px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .home-info-section span img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    div.home-information{
+        width: 80%;
+    }
+    div.home-title h1{
+        font-size: 7.3em;
+    }
+
+    .home-info-section{
+        margin-right: 6px;
+        margin-left: 6px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .home-info-section span img{
+        width: 63px;
+        height: 63px;
+    }
+}
+
+@media (min-width: 768px) { 
+    div.home-information{
+        width: 85%;
+    }
+    div.home-title h1{
+        font-size: 7.5em;
+    }
+
+    .home-info-section{
+        margin-right: 15px;
+        margin-left: 15px;
+        width: 80px;
+        height: 80px;
+    }
+    
+    .home-info-section span img{
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 980px){
+    div.home-information{
+        width: 80%;
+    }
+    .home-info-section{
+        margin-right: 4px;
+        margin-left: 4px;
+        width: 130px;
+        height: 130px;
+    }
+
+    .home-info-section span img{
+        width: 85px;
+        height: 85px;
+    }
+}
+
+@media (min-width: 1280px){
+
+    div.home-information{
+        width: 1000px;;
+    }
+    
+    .home-info-section{
+        margin-right: 4px;
+        margin-left: 4px;
+        width: 140px;
+        height: 140px;
+    }
+
+    .home-info-section span img{
+        width: 90px;
+        height: 90px;
+    }
+}

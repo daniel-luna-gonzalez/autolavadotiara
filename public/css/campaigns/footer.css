@@ -1,0 +1,71 @@
+.todosxuno-footer{
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    width:100%;
+    height:40px;
+}
+
+.footer-background{
+     text-align: center;
+    background-color: rgba(60,167,194, .7);
+    opacity: .8;
+    width: 100%;
+    height:40px;
+    position: absolute;
+}
+
+.todosxuno-footer-logo{
+    z-index: 200;
+    padding-left: 50px;
+    display: flex;
+    justify-content: flex-start ; /* align horizontal */
+    align-items: center; /* align vertical */
+    height: 100%;
+}
+
+.todosxuno-footer-text{
+    z-index: 200;
+    text-align: right;
+    padding-right: 50px;
+    display: flex;
+    justify-content: flex-end; /* align horizontal */
+    align-items: center; /* align vertical */
+    height: 100%;
+}
+
+@media (max-width: 320px){
+    .todosxuno-footer-logo{
+        padding: 0;
+    }
+    .todosxuno-footer-logo img{
+        width: 40px;
+    }
+    .todosxuno-footer-text{
+        font-size: 5px;
+    }
+}
+
+@media (max-width: 568px) and (min-height: 321px) {
+    .todosxuno-footer-text{
+        font-size: 7px;
+    }
+}
+
+@media(max-width: 768px) and (min-width:569px) {
+    .todosxuno-footer-text{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 769px) {
+
+}
+
+@media (max-width: 1280px) and (min-width: 992px) {
+
+}
+
+@media (min-width: 1281px) {
+
+}
