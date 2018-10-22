@@ -1,13 +1,5 @@
 <div class="home-title">
-    <h1>HAZLO REALIDAD</h1>
-</div>
-
-<div class="home-subtitle">
-    <h2>APOYA MENSUALMENTE</h2>
-</div>
-
-<div class="home-subtitle2">
-    <h3>Cambia vidas todo el año</h3>
+    <h1>AUTOLAVADO TIARA</h1>
 </div>
 
 <div class="home-information">

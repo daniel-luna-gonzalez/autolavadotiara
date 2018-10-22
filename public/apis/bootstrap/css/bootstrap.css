@@ -2457,14 +2457,6 @@ table th[class*="col-"] {
   body div.home-title h1 {
     margin-top: 20%;
   }
-  a.navbar-brand > img.logocc {
-    display: none;
-  }
-
-  body .navbar-brand > img.logocc_m{
-    display: block;
-    margin: 0 auto;
-  }
 
   body a.navbar-brand {
     padding: 8px 15px;
@@ -6789,8 +6781,6 @@ button.close {
 }
 
 @media (max-width: 992px) {
-  a.navbar-brand > img.logocc {background: none;
-    width: 30px;}
-    .navbar-brand {padding: 15px;}
+
 }
 /*# sourceMappingURL=bootstrap.css.map */

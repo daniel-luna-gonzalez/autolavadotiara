@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Hazlo Realidad')
+@section('title', 'Autolavado Tiara')
 
 
 @section('content')

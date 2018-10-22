@@ -16,7 +16,6 @@ require.config({
         causas: "js/causas",
         "porquedonar": "js/porquedonar",
         contacto: 'js/contacto',
-        donors: 'js/donors',
         messages: 'js/messages',
         paypal: 'js/paypal',
         alerts: 'js/alerts',

@@ -1,6 +1,6 @@
 <div class="wrapper-donar">
     <div  class="section-title">
-        <h1>Donar ahora</h1>
+        <h1>Contratar paquete</h1>
     </div>
     <div class="form-donor">
         <section>
