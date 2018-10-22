@@ -11,7 +11,7 @@ require.config({
 //        pagepiling: 'apis/pagepiling/jquery.pagepiling.min',
         easing: 'apis/scrolling-nav/js/jquery.easing.min',
         scrolling: 'apis/scrolling-nav/js/scrolling-nav',
-        donar: "js/donar",
+        contratar: "js/contratar",
         testimoniales: "js/testimoniales",
         causas: "js/causas",
         "porquedonar": "js/porquedonar",

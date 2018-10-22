@@ -1,5 +1,5 @@
 define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepicker', 'messages', 'paypal', 'alerts', 'Conekta', 'app', 'jquery-ui-datepicker', 'jquery-payform'], function ($, bt, bdialog, bdtp, message, paypal, alerts, conekta, app, datepicker, jquerypayform) {
-    var Donate = function () {
+    var Contratar = function () {
         /**
          * @description Modal Object of Credit Card Form
          * @type string
@@ -574,5 +574,5 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
         }
     };
 
-    return new Donate();
+    return new Contratar();
 });

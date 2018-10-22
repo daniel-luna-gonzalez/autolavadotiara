@@ -41,7 +41,7 @@
 <section id="contratar" class="section background-donar">
     <div class="wrapper-section">
         <!--<div class="table-section">-->
-        @include('includes.donar')
+        @include('includes.contratar')
         <!--</div>-->
     </div>
     <div class="wrapper-arrow text-center">

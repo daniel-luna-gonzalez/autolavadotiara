@@ -59,23 +59,23 @@
 
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
-                        @include('includes.donar.montos')
+                        @include('includes.contratar.paquetes')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step2">
-                        @include('includes.donar.causas')
+                        @include('includes.contratar.causas')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step3">
-                        @include('includes.donar.datospersonales')
+                        @include('includes.contratar.datospersonales')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step4">
-                        @include('includes.donar.recibo')
+                        @include('includes.contratar.recibo')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step5">
-                        @include('includes.donar.infopago')
+                        @include('includes.contratar.infopago')
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -84,4 +84,4 @@
     </div>
 </div>
 
-@include('includes.donar.gracias')
+@include('includes.contratar.gracias')
