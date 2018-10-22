@@ -144,7 +144,7 @@ span.round-tab:hover {
     transition: 0.1s ease-in-out;
 }
 
-.wizard li.active:after {
+.wizard .ulwizard li.active:after {
     content: " ";
     position: absolute;
     left: 42%;
@@ -377,6 +377,18 @@ button.donar-button-next:hover{
 }
 
 
+li.tab-paquete{
+    border-radius: .25rem;
+    color: #fff;
+    background-color: transparent;
+    display: block;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+li.tab-paquete.active{
+    background-color: #007bff;
+}
+
 @media (max-width: 320px){   
     .donor-title h1{
         font-size: 2em;
@@ -420,7 +432,7 @@ button.donar-button-next:hover{
         height: 53%;
     }
 
-    .wizard li.active:after {
+    .wizard .ulwizard li.active:after {
         left: 30%;
     }
 
@@ -905,7 +917,7 @@ button.donar-button-next:hover{
         line-height: 50px;
     }
 
-    .wizard li.active:after {
+    .wizard .ulwizard li.active:after {
         content: " ";
         position: absolute;
         left: 42%;

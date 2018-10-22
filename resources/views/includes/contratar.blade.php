@@ -8,7 +8,7 @@
                 <div class="wizard-inner">
                     <div class="connecting-line"></div>
                     <!--<div class="connecting-completed"></div>-->
-                    <ul class="nav nav-tabs" role="tablist">
+                    <ul class="nav nav-tabs ulwizard" role="tablist">
 
                         <li role="presentation" class="active" validate="amount">
                             <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Selección de monto">
