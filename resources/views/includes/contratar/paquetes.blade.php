@@ -29,7 +29,9 @@
         <div class="tab-pane active" id="paquete1">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div class="paquete-servicios">1 Lavada Semanal</div>
+                    <div class="paquete-servicios">
+                        <p>1 Lavada Semanal</p>
+                    </div>
                     <div class="paquete-precio-servicio" id="paquete1-price" >  </div>
                 </div>
             </div>
@@ -37,7 +39,9 @@
         <div class="tab-pane" id="paquete2">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div>2 Lavadas Semanales</div>
+                    <div class="paquete-servicios">
+                        <p>2 Lavadas Semanales</p>
+                    </div>
                     <div class="paquete-precio-servicio" id="paquete2-price" >  </div>
                 </div>
             </div>
@@ -45,8 +49,12 @@
         <div class="tab-pane" id="paquete3">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div>2 Lavadas Semanales</div>
-                    <div>Baño de cera 1 vez a la quincena</div>
+                    <div class="paquete-servicios">
+                        <p>2 Lavadas Semanales</p>
+                    </div>
+                    <div class="paquete-servicios">
+                        <p>Baño de cera 1 vez a la quincena</p>
+                    </div>
                     <div class="paquete-precio-servicio" id="paquete3-price" >  </div>
                 </div>
             </div>
@@ -54,8 +62,12 @@
         <div class="tab-pane" id="paquete4">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div>2 Lavadas Semanales</div>
-                    <div>Baño de cera 1 vez a la semana</div>
+                    <div class="paquete-servicios">
+                        <p>2 Lavadas Semanales</p>
+                    </div>
+                    <div class="paquete-servicios">
+                        <p>Baño de cera 1 vez a la semana</p>
+                    </div>
                     <div class="paquete-precio-servicio" id="paquete4-price" >  </div>
                 </div>
             </div>
@@ -63,8 +75,12 @@
         <div class="tab-pane" id="paquete5">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div>2 Lavadas Semanales</div>
-                    <div>Ecerado 1 vez a la quincena</div>
+                    <div class="paquete-servicios">
+                        <p>2 Lavadas Semanales</p>
+                    </div>
+                    <div class="paquete-servicios">
+                        <p>Ecerado 1 vez a la quincena</p>
+                    </div>
                     <div class="paquete-precio-servicio" id="paquete5-price" >  </div>
                 </div>
             </div>
@@ -72,8 +88,12 @@
         <div class="tab-pane" id="paquete6">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div>2 Lavadas Semanales</div>
-                    <div>Encerado 1 vez a la semana</div>
+                    <div class="paquete-servicios">
+                        <p>2 Lavadas Semanales</p>
+                    </div>
+                    <div class="paquete-servicios">
+                        <p>Encerado 1 vez a la semana</p>
+                    </div>
                     <div class="paquete-precio-servicio" id="paquete6-price" >  </div>
                 </div>
             </div>
