@@ -376,6 +376,10 @@ button.donar-button-next:hover{
     to { -moz-transform: rotate(360deg);}
 }
 
+.table-paquete th:hover{
+    background-color: #8eb4cb;
+    color: #0d3625;
+}
 
 li.tab-paquete{
     border-radius: .25rem;

@@ -29,7 +29,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Hazlo Realidad') }}
+                        {{ config('app.name', 'Tiara Autolavado') }}
                     </a>
                 </div>
 

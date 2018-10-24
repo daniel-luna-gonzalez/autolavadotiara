@@ -14,7 +14,7 @@
         <div class="tab-pane active" id="camioneta">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table">
+                    <table class="table table-paquete">
                         <thead>
                         <th></th>
                         <th>Paquete 1</th>
@@ -96,7 +96,7 @@
         <div class="tab-pane" id="coche">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table">
+                    <table class="table table-hover table-paquete">
                         <thead>
                         <th></th>
                         <th>Paquete 1</th>

@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/v1/test', function(Request $request) {
-    die("api v1 hazlo realidad");
+    die("api v1 tiara autolavado");
 });
 
 Route::group(['middleware' => 'cors'], function() {

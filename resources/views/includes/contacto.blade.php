@@ -11,8 +11,7 @@
                 Comunícate con nosotros, contestaremos lo antes posible
             </div>
             <div class="contacto-info-correo">
-                <p>info@hazlorealidad.org</p>
-                <p>Tel. 5596-9966</p>
+                <p>tiaraautolavado@gmail.com.org</p>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacto-left">
