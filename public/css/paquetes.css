@@ -412,6 +412,10 @@ li.tab-paquete.active{
 }
 
 @media (max-width: 568px) and (min-height: 321px) {
+    section.background-donar div.wrapper-section {
+        padding-top: 80px;
+    }
+
     .donor-title h1{
         font-size: 2em;
     }
