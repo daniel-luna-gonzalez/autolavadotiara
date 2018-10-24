@@ -1,25 +1,25 @@
 <div >
     <div>
-        <h3>Seleccione su paquete</h3>
+        <h3>Seleccione su paquete para su <span id="tipoCocheSelected"></span></h3>
     </div>
-    <div class="container">
-        <ul class="nav nav-pills">
-            <li class="active tab-paquete" data-target="#paquete1" data-toggle="tab">
+    <div>
+        <ul class="nav nav-pills" id="navPaquete">
+            <li class="active tab-paquete" data-target="#paquete1" data-toggle="tab" value="1">
                 <span >Paquete 1</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete2" data-toggle="tab">
+            <li class="tab-paquete" data-target="#paquete2" data-toggle="tab" value="2">
                 <span >Paquete 2</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete3"  data-toggle="tab">
+            <li class="tab-paquete" data-target="#paquete3"  data-toggle="tab" value="3">
                 <span >Paquete 3</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete4" data-toggle="tab">
+            <li class="tab-paquete" data-target="#paquete4" data-toggle="tab" value="4">
                 <span >Paquete 4</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete5" data-toggle="tab">
+            <li class="tab-paquete" data-target="#paquete5" data-toggle="tab" value="5">
                 <span >Paquete 5</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete6" data-toggle="tab">
+            <li class="tab-paquete" data-target="#paquete6" data-toggle="tab" value="6">
                 <span >Paquete 6</span>
             </li>
         </ul>

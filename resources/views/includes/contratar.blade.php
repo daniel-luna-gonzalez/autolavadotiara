@@ -19,7 +19,7 @@
                             </a>
                         </li>
 
-                        <li role="presentation" class="disabled" validate="amount">
+                        <li role="presentation" class="disabled" validate="paqueteSeleccionado">
                             <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Causas">
                                 <span class="round-tab">
                                     2
@@ -28,7 +28,7 @@
                             </a>
                         </li>
 
-                        <li role="presentation" class="disabled" validate="personalData">
+                        <li role="presentation" class="disabled" validate="datosAutomovil">
                             <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Datos personales">
                                 <span class="round-tab">
                                     3
@@ -36,7 +36,7 @@
                                 </span>
                             </a>
                         </li>
-                        <li role="presentation" class="disabled" validate="deductibleReceipt">
+                        <li role="presentation" class="disabled" validate="personalData">
                             <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Datos para el recibo">
                                 <span class="round-tab">
                                     4
@@ -67,11 +67,11 @@
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step3">
-                        @include('includes.contratar.datospersonales')
+                        @include('includes.datosAutomovil')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step4">
-                        @include('includes.contratar.recibo')
+                        @include('includes.contratar.datospersonales')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step5">

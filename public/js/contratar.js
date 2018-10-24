@@ -18,8 +18,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             $(document).ready(function () {
                 initWizard();
-                initDonationDescription();
-		        initCauses();
+                initSeleccionTipoAuto();
 
                 $('#donor-birthday').datepicker({
                     changeMonth: true,
@@ -44,10 +43,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
                 });
 
-                $(".share-facebook").click(function () {
-                    fbsclick();
-                });
-
                 ccValidation();
 
             });
@@ -69,9 +64,9 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             $(".next-step").click(function (e) {
                 var currentStep = $('.wizard-inner li.active').attr('validate');
-                console.log(currentStep);
+
                 if(currentStep === undefined)
-                    wizardNextStep();
+                    return wizardNextStep();
 
                 if (!self.validate[currentStep]())
                     return 0;
@@ -130,13 +125,13 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             $.ajax({
                 url: APP_URL + "api/v1/conekta/suscripcionTarjeta/create",
                 type: "POST",
-                data: {donor: getDonorParams(), card: getCardParams(), fiscalEntity: getFiscalEntity(), tokenCard: token},
+                data: {donor: getDonorParams(), card: getCardParams(), tokenCard: token},
                 async: false,
                 success: function (response, textStatus, jqXHR) {
                     console.log("success");
                     console.log(response);
                     if (response.status) {
-                        $('#text-amount').text("$" + amountSelected());
+                        // $('#text-amount').text("$" + amountSelected());
                         $('.wrapper-donar').hide();
                         $('.donar-thanks-donor').show();
                     }
@@ -211,100 +206,19 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 phone: getFormValue('#donor-phone'),
                 email: getFormValue('#donor-email'),
                 birthday: getFormValue('#donor-birthday'),
-                causas: getCausas(),
                 fiscalEntity: ($('#fiscal-entity').is(":checked")) ? 1 : 0,
                 donationAnon: ($('#donation-anon').is(':checked')) ? 1 : 0
             };
         };
 
-        var getFiscalEntity = function () {
-            var data = {
-                name: getFormValue("#company_name"),
-                tax_id: getFormValue("#tax_id"),
-//                address: {
-                street1: getFormValue("#street1"),
-                street3: getFormValue("#street3"),
-//                },
-                city: getFormValue("#fiscal-city"),
-                state: getFormValue("#state"),
-                zip: getFormValue("#zip")
-            };
-
-//            $('#form-recibo').serializeArray().map(function (x) {
-//                data[x.name] = x.value;
-//            });
-            return data;
-        };
-
-        var getCausas = function () {
-            var causas = [];
-
-            $('.wrapper-cause-box.checked').each(function () {
-                causas.push({id: $(this).attr('value'), name: $(this).find(".wrapper-text-cause").first().text(), description: $(this).attr('data-toggle')});
-            });
-            console.log(causas);
-            return causas;
-        };
-
-        var amountSelected = function () {
-            var amount = $('.donation-amount.active').attr("amount");
-
-            if(!parseInt(amount) > 0) {
-                var amount = parseFloat($.trim($('#amount').val()));
-
-                if(!amount > 0)
-                    amount = 0
-                else
-                    amount = parseFloat(Math.round(amount * 100) / 100).toFixed(2)
-            }
-
-            return amount;
-        };
-
         var initSeleccionTipoAuto = function(){
-
+            $('.button-tipo-auto').on('click', function(){
+                var button = this;
+                $('.button-tipo-auto').removeClass('active');
+                $(button).addClass('active');
+                $('#tipoCocheSelected').text($(button).text());
+            });
         }
-
-        /**
-         * @description Shows description of each donation amount
-         * @returns {undefined}
-         */
-        var initDonationDescription = function () {
-            $('button.donation-amount').on("click touchstart", function () {
-                var text = $(this).attr("tooltip-data");
-                $('#donationDescription').html(text);
-                $('#amount').val("");
-                $('button.donation-amount').removeClass("active");
-                $(this).addClass("active");
-            });
-
-            $('.donation-amount').hover(function () {
-                $('#donationDescription').html($(this).attr("tooltip-data"));
-            }, function () {
-                var text = $('.donation-amount.active').attr("tooltip-data");
-                $('#donationDescription').html((text == undefined) ? "Selecciona el monto que desea donar" : text );
-                var amount = parseFloat($('#amount').val());
-
-                if(amount > 0) {
-                    if($('#amount').is(":focus"))
-                        $('#donationDescription').html("Ingrese el monto que desea donar");
-                    else
-                        $('#donationDescription').html("<text class='donar-monto-amount-info'>$" + amount + "</text> ");
-                }
-            });
-
-            $('#amount').focus(function(){
-                $('.donation-amount').removeClass("active");
-                $('#donationDescription').html("Ingrese el monto que desea donar");
-            });
-
-            $('#amount').focusout(function(){
-                var amount = parseFloat($.trim($(this).val()));
-                amount = parseFloat(Math.round(amount * 100) / 100).toFixed(2);
-                if(parseFloat(amount) > 0)
-                    $('#donationDescription').html("<text class='donar-monto-amount-info'>$" + amount + "</text> ");
-            });
-        };
 
         var validateRequiredFields = function (container) {
 
@@ -339,68 +253,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             return status;
         };
-
-        var initCauses = function(){
-            var clickEventType=((document.ontouchstart!==null)?'click':'touchstart');
-
-            $("#causes-check-all").on(clickEventType,function () {
-                if($(this).hasClass("checked"))  {
-                    $(".wrapper-cause-box").removeClass("checked");
-                    $(".wrapper-cause-box").removeClass("hover");
-                    $(this).removeClass("checked");
-                    $(this).removeClass("hover");
-                }
-                else{
-                    $(".wrapper-cause-box").addClass("checked");
-                    $(".wrapper-cause-box").removeClass("hover");
-                    $(this).addClass("checked");
-                    $(this).removeClass("hover");
-                }
-            });
-
-            if(String(clickEventType) != "touchstart")
-                $("#causes-check-all").hover(function(e){
-                    if(!$(this).hasClass("checked"))
-                        $(this).addClass("hover");
-                    // console.log("activating all");
-
-                },function(){
-                    $(this).removeClass("hover");
-                });
-
-            $('.wrapper-cause-box').on(clickEventType, function(){
-                if($(this).hasClass("checked")){
-                    $(this).removeClass("checked");
-                    $(this).removeClass("hover");
-                    console.log("remove hover and checked");
-                } else{
-                    $(this).addClass("checked");
-                    $(this).removeClass("hover");
-                    // console.log("removed hover and add checked");
-                }
-
-                if($('.wrapper-cause-box.checked').length == 6) {
-                    $('#causes-check-all').addClass("checked");
-                    $('#causes-check-all').removeClass("hover");
-                    // console.log("activating all");
-                }
-                else{
-                    $('#causes-check-all').removeClass("checked");
-                    $('#causes-check-all').removeClass("hover");
-                    // console.log("removed hover");
-                }
-            });
-
-            if(String(clickEventType) != "touchstart")
-                $('.wrapper-cause-box').hover(function(e){
-                    if(!$(this).hasClass("checked"))
-                        $(this).addClass("hover");
-                    // console.log("function hover");
-                },function(){
-                    $(this).removeClass("hover");
-                    // console.log("function hover removed");
-                });
-        }
 
         var addBlockErrorForm = function (input, errorType) {
             var errorMessage = getFormMessage(input, errorType);
@@ -457,54 +309,16 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
         }
 
         this.validate = {
-            amount: function () {
-                var status = ($('button.donation-amount.active').length > 0) ? true : false;
-                var amountInput = $('#amount').val();
-                console.log(parseFloat(amountInput));
-                console.log(status);
-                if(!status) {
-                    if (parseFloat(amountInput) >= 300) {
-                        status = true;
-                    } else {
-                        console.log("else");
-                        $('#monto-error-donor div.alert-danger').empty().append("Seleccione un monto mayor o igual a $100.00");
-                        $('#monto-error-donor').show();
-                    }
-                }
-                else{
-                    if (status)
-                        $('#monto-error-donor').hide();
-                    else{
-                        $('#monto-error-donor div.alert-danger').empty().append("Seleccione un monto");
-                        $('#monto-error-donor').show();
-                    }
-                }
-                console.log(status);
+            paqueteSeleccionado: function () {
+                var paqueteSelected = $('#navPaquete li.active').attr('value');
 
-                return status;
-            },
-            cause: function () {
-                console.log("validating cause");
+                if(!parseInt(paqueteSelected) > 0)
+                    return false;
 
-                var status = ($('.wrapper-cause-box.checked').length > 0) ? true : false;
-
-                if (status)
-                    $('#causas-error-donor').hide();
-                else
-                    $('#causas-error-donor').show();
-
-                return status;
+                return true;
             },
             personalData: function () {
-                console.log("validating personal data");
                 return (validateRequiredFields('#personal-data-container')) ? true : false;
-            },
-            deductibleReceipt: function () {
-                console.log("validating deductible receipt");
-                if (!$('#fiscal-entity').is(':checked'))
-                    return true;
-
-                return (validateRequiredFields("#form-fiscal-entity")) ? true : false;
             },
             paymentInformation: function () {
                 console.log("validating payment information");
@@ -570,14 +384,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     visa.addClass('transparent');
                 }
             });
-        }
-
-        var fbsclick = function () {
-            var u = "https://hazlorealidad.org/media/images/hazlorealidad-share-fb.png";
-            // t=document.title;
-            t = "Hazlo realidad";
-            window.open('http://www.facebook.com/sharer.php?u=' + encodeURIComponent(u) + '&t=' + encodeURIComponent(t), 'sharer', 'toolbar=0,status=0,width=626,height=436');
-            return false;
         }
     };
 
