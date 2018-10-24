@@ -69,6 +69,9 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             $(".next-step").click(function (e) {
                 var currentStep = $('.wizard-inner li.active').attr('validate');
+                console.log(currentStep);
+                if(currentStep === undefined)
+                    wizardNextStep();
 
                 if (!self.validate[currentStep]())
                     return 0;
@@ -257,6 +260,10 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             return amount;
         };
+
+        var initSeleccionTipoAuto = function(){
+
+        }
 
         /**
          * @description Shows description of each donation amount

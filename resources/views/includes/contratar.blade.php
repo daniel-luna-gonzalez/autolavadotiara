@@ -10,7 +10,7 @@
                     <!--<div class="connecting-completed"></div>-->
                     <ul class="nav nav-tabs ulwizard" role="tablist">
 
-                        <li role="presentation" class="active" validate="amount">
+                        <li role="presentation" class="active">
                             <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Selección de monto">
                                 <span class="round-tab">
                                     1
@@ -19,7 +19,7 @@
                             </a>
                         </li>
 
-                        <li role="presentation" class="disabled" validate="cause">
+                        <li role="presentation" class="disabled" validate="amount">
                             <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Causas">
                                 <span class="round-tab">
                                     2
@@ -59,11 +59,11 @@
 
                 <div class="tab-content">
                     <div class="tab-pane active" role="tabpanel" id="step1">
-                        @include('includes.contratar.paquetes')
+                        @include('includes.contratar.SeleccionTipoAuto')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step2">
-                        @include('includes.contratar.causas')
+                        @include('includes.contratar.paquetes')
                     </div>
 
                     <div class="tab-pane" role="tabpanel" id="step3">

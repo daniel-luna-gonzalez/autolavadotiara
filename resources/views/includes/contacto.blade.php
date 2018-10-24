@@ -2,8 +2,8 @@
     <div  class="section-title">
         <h1 class="contacto-title">Contacto</h1>
     </div>
-    <div class="panel-contacto ">
-        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacto-cen">
+    <div class="panel-contacto col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="contacto-icon">
                 <img src="/media/images/contact-mail.png">
             </div>
@@ -11,7 +11,7 @@
                 Comunícate con nosotros, contestaremos lo antes posible
             </div>
             <div class="contacto-info-correo">
-                <p>tiaraautolavado@gmail.com.org</p>
+                <p>tiaraautolavado@gmail.com</p>
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 contacto-left">

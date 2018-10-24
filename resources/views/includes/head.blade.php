@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="css/hazlorealidad.css">
 <link rel="stylesheet" href="css/navbar.css">
 <link rel="stylesheet" href="css/quienes_somos.css">
+<link rel="stylesheet" href="css/SeleccionTipoAuto.css">
 <link rel="stylesheet" href="css/paquetes.css">
 <link rel="stylesheet" href="css/donor-causes.css">
 <link rel="stylesheet" href="css/contacto.css">

@@ -1,177 +1,74 @@
-<div>
+<div >
+    <div>
+        <h3>Seleccione su paquete</h3>
+    </div>
     <div class="container">
         <ul class="nav nav-pills">
-            <li class="active tab-paquete">
-                <span data-target="#camioneta" data-toggle="tab">Camioneta</span>
+            <li class="active tab-paquete" data-target="#paquete1" data-toggle="tab">
+                <span >Paquete 1</span>
             </li>
-            <li class="tab-paquete">
-                <span data-target="#coche" data-toggle="tab">Coche</span>
+            <li class="tab-paquete" data-target="#paquete2" data-toggle="tab">
+                <span >Paquete 2</span>
+            </li>
+            <li class="tab-paquete" data-target="#paquete3"  data-toggle="tab">
+                <span >Paquete 3</span>
+            </li>
+            <li class="tab-paquete" data-target="#paquete4" data-toggle="tab">
+                <span >Paquete 4</span>
+            </li>
+            <li class="tab-paquete" data-target="#paquete5" data-toggle="tab">
+                <span >Paquete 5</span>
+            </li>
+            <li class="tab-paquete" data-target="#paquete6" data-toggle="tab">
+                <span >Paquete 6</span>
             </li>
         </ul>
     </div>
 
     <div class="tab-content">
-        <div class="tab-pane active" id="camioneta">
+        <div class="tab-pane active" id="paquete1">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table table-paquete">
-                        <thead>
-                        <th></th>
-                        <th>Paquete 1</th>
-                        <th>Paquete 2</th>
-                        <th>Paquete 3</th>
-                        <th>Paquete 4</th>
-                        <th>Paquete 5</th>
-                        <th>Paquete 6</th>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1 Lavada Semanal</td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>2 Lavada Semanales</td>
-                            <td></td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>Baño de cera 1 vez a la quincena</td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Baño de cera 1 vez a la semana</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Encerado 1 vez a la quincena</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Encerado 1 vez a la semana</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td>300</td>
-                            <td>600</td>
-                            <td>800</td>
-                            <td>1000</td>
-                            <td>1200</td>
-                            <td>1900</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div class="paquete-servicios">1 Lavada Semanal</div>
                 </div>
             </div>
         </div>
-        <div class="tab-pane" id="coche">
+        <div class="tab-pane" id="paquete2">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <table class="table table-hover table-paquete">
-                        <thead>
-                        <th></th>
-                        <th>Paquete 1</th>
-                        <th>Paquete 2</th>
-                        <th>Paquete 3</th>
-                        <th>Paquete 4</th>
-                        <th>Paquete 5</th>
-                        <th>Paquete 6</th>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1 Lavada Semanal</td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>2 Lavada Semanales</td>
-                            <td></td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>Baño de cera 1 vez a la quincena</td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Baño de cera 1 vez a la semana</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Encerado 1 vez a la quincena</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Encerado 1 vez a la semana</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>Total</td>
-                            <td>240</td>
-                            <td>480</td>
-                            <td>630</td>
-                            <td>780</td>
-                            <td>980</td>
-                            <td>1480</td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <div>2 Lavadas Semanales</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="paquete3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>2 Lavadas Semanales</div>
+                    <div>Baño de cera 1 vez a la quincena</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="paquete4">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>2 Lavadas Semanales</div>
+                    <div>Baño de cera 1 vez a la semana</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="paquete5">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>2 Lavadas Semanales</div>
+                    <div>Ecerado 1 vez a la quincena</div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="paquete6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div>2 Lavadas Semanales</div>
+                    <div>Encerado 1 vez a la semana</div>
                 </div>
             </div>
         </div>
@@ -184,7 +81,8 @@
             Seleccione un paquete
         </div>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div>
+        <button type="button" class="btn btn-primary prev-step donar-button-next">Regresar</button>
         <button type="button" class="btn btn-primary next-step donar-button-next">Continuar</button>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
