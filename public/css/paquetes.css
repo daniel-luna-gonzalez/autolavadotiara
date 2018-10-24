@@ -19,10 +19,6 @@ and open the template in the editor.
     background-size: cover;
 }
 
-#donar .table-section {
-    /*background: rgba(0, 0, 0, 0.07);*/
-}
-
 .wrapper-donar{
     color: white;
 }
@@ -63,7 +59,7 @@ and open the template in the editor.
 
 .connecting-line {
     height: 2px;
-    background: #E95D7E;;
+    background: rgb(33, 150, 243);
     position: absolute;
     width: 80%;
     margin: 0 auto;
@@ -75,7 +71,7 @@ and open the template in the editor.
 
 .connecting-completed{
     height: 2px;
-    background: #E95D7E;
+    background: rgb(33, 150, 243);
     position: absolute;
     width: 29%;
     /*margin: 0 auto;*/
@@ -113,14 +109,14 @@ span.round-tab i{
 
 .wizard li.active span.round-tab {
     background: #fff;
-    border: 2px solid #E95D7E;
+    border: rgb(33, 150, 243);;
     color: white;
-    background-color: #E95D7E;
+    background-color: rgb(33, 150, 243);
 }
 .wizard li span.round-tab {
     background-color: white;
-    border: 2px solid #E95D7E;
-    color: #E95D7E;
+    border: rgb(33, 150, 243);
+    color: rgb(33, 150, 243);
 }
 
 span.round-tab:hover {
@@ -152,7 +148,7 @@ span.round-tab:hover {
     margin: 0 auto;
     bottom: 1px;
     border: 10px solid transparent;
-    border-bottom-color: #E95D7E;
+    border-bottom-color: rgb(33, 150, 243);
 }
 
 .wizard .nav-tabs > li a {
@@ -178,40 +174,18 @@ span.round-tab:hover {
     margin-top: 0;
 }
 
-.tab-content{
+.tab-content-wizard{
     display: inline-block;
     /*background-color: black;*/
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.75);
     border-radius: 10px 10px;
     /*height: 100%;*/
     /*overflow-y: auto;*/
     width: 100%;
+    padding: 20px;
+    min-height: 200px;
 }
 
-button.donation-amount{
-    background-color: white;
-    color: #E95D7E;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 5px;   
-    font-size: 15px;
-}
-
-button.donation-amount.active{
-    background-color: #E95D7E;
-    color: white;
-    font-weight: bold;
-}
-
-button.donation-amount:hover{
-    background-color: #E95D7E;
-    color: white;
-
-}
-
-.donationDescription{
-    font-size: 19px;
-}
 
 p.donacion-tab-title{
     font-size: 1.5em;
@@ -220,117 +194,6 @@ p.donacion-tab-title{
     margin-top: 5px;
 }
 
-.donation-amount .help-block{
-    top: 36px;
-    display: -moz-grid-group;
-    position: absolute;
-    font-size: 10px;
-    color: white;
-}
-
-input.donation-amount{
-    background-color: white;
-    color: #E95D7E;
-    font-weight: bold;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-size: 15px;
-}
-
-input.donation-amount.active{
-    background-color: #E95D7E;
-    color: white;
-    font-weight: bold;
-}
-
-input.donation-amount:hover{
-    background-color: #E95D7E;
-    color: white;
-
-}
-
-button.donar-button-next{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-button.donar-button-next{
-    background-color: #E95D7E;
-    color: white;
-    font-size: 18px;
-    border: 0;
-}
-
-button.donar-button-next:hover{
-    background-color: white;
-    color: #E95D7E;
-}
-
-.donar-thanks-donor{
-    display: none;  
-}
-
-.donar-thanks-donor .donar-info{
-    color: #979796;
-}
-
-.donar-info .donar-info-gracias{
-    font-size: 3.6em;
-}
-
-.donar-share img{
-    width:  60px;
-}
-
-.donar-share p{
-    color:  white;
-    cursor: pointer;
-}
-
-.donar-info .donar-info-apoyo{
-    font-size: 1.5em;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.donar-info .donar-info-recibo{
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.donar-thanks-donor .donor-thanks-logo img{
-    width: 200px;
-    height: 200px;
-}
-
-
-.donar-info-hr-tu-tambien{
-    color: white;
-    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
-}
-
-.donar-info-hr-tu-tambien h1{
-    font-size: 4em;
-}
-
-.donar-montos-info{
-    font-size: 1em;
-}
-
-
-.donar-monto-amount-info{
-    color: #E95D7E;
-    font-weight: bold;
-}
-
-.causas-info{
-    font-size: .9em;
-}
-
-.donar-checkbox-causas img{
-    width: 50px;
-    height: 50px;
-}
 
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;
@@ -465,12 +328,6 @@ li.tab-paquete.active{
         vertical-align: middle;
     }
 
-    .donationDescription {
-        color: white;
-        margin-top: 10px;
-        margin-bottom: 7px;
-    }
-
     span.round-tab {
         width: 20px;
         height: 20px;
@@ -513,10 +370,6 @@ li.tab-paquete.active{
         font-size: 2em;
     }
 
-    .donationDescription{
-        font-size: .9em;
-    }
-
     .donar-montos-info{
         font-size: 0.7em;
     }
@@ -531,14 +384,6 @@ li.tab-paquete.active{
         text-align: left;
         margin-bottom: 3px;
         margin-top: 5px;
-    }
-
-    .donar-recibo-datos label {
-        font-size: 12px;
-    } 
-
-    .donar-recibo-datos .form-group{
-        margin-bottom: 1px;
     }
 
     .payment-information-container .form-group{
@@ -626,13 +471,6 @@ li.tab-paquete.active{
 
     .cc-container img {
         width: 50px;
-    }
-
-    .donationDescription {
-        color: white;
-        margin-top: 10px;
-        margin-bottom: 7px;
-        font-size: 1.2em;
     }
 
     span.round-tab {
@@ -742,14 +580,6 @@ li.tab-paquete.active{
         border-radius: 100%;
         padding: 0;
     }
-
-    .donationDescription {
-        color: white;
-        margin-top: 10px;
-        margin-bottom: 7px;
-         font-size: 1.2em;
-    }
-
     span.round-tab {
         width: 20px;
         height: 20px;
@@ -888,11 +718,6 @@ li.tab-paquete.active{
         padding: 0;
     }
 
-    .donationDescription {
-        color: white;
-        margin-top: 10px;
-        margin-bottom: 7px;
-    }
 
     span.round-tab {
         width: 20px;
@@ -936,55 +761,16 @@ li.tab-paquete.active{
 
 @media (max-width: 1280px) and (min-width: 992px){
     .wizard {
-        width: 600px;
+        width: 700px;
     }
     .donor-title h1{
         font-size: 4em;
-    }
-
-    .donar-info .donar-info-gracias{
-        font-size: 2.5em;
-    }
-
-    .donar-info .donar-info-apoyo{
-        font-size: 1.3em;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .donar-info .donar-info-recibo{
-        font-size: 1.2em;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .donar-info-hr-tu-tambien h1{
-        font-size: 2.6em;
     }
 }
 
 @media (min-width: 1281px){
     .wizard {
-        width: 600px;
+        width: 800px;
     }
 
-    .donar-info .donar-info-gracias{
-        font-size: 3.4em;
-    }
-
-    .donar-info .donar-info-apoyo{
-        font-size: 1.6em;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .donar-info .donar-info-recibo{
-        font-size: 1.5em;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
-    .donar-info-hr-tu-tambien h1{
-        font-size: 2.8em;
-    }
 }

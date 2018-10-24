@@ -30,6 +30,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="paquete-servicios">1 Lavada Semanal</div>
+                    <div class="paquete-precio-servicio">  </div>
                 </div>
             </div>
         </div>

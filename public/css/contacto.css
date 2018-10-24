@@ -25,7 +25,7 @@ and open the template in the editor.
 .panel-contacto{
     width: 80%;
     /*    height: 40%;*/
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.75);
     border-radius: 10px 10px;
     color: white;
     margin: auto;
@@ -56,7 +56,7 @@ and open the template in the editor.
 }
 
 .contacto-button{
-    background-color: #E95D7E;
+    background-color: rgb(33, 150, 243);
     color: white;
     font-size: 18px;
     margin-top: 10px;

@@ -144,6 +144,12 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             restoreDonorButton();
         };
 
+        var paqueteSelected = function(){
+            var paqueteSelected = $('#navPaquete li.active').attr('value');
+
+            return parseInt(paqueteSelected);
+        }
+
         var restoreDonorButton = function () {
             $('#boton-donar').attr('disabled', false).find('span').remove();
         };
@@ -310,12 +316,15 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
         this.validate = {
             paqueteSeleccionado: function () {
-                var paqueteSelected = $('#navPaquete li.active').attr('value');
+                var paquete = paqueteSelected();
 
-                if(!parseInt(paqueteSelected) > 0)
+                if(!parseInt(paquete) > 0)
                     return false;
 
                 return true;
+            },
+            datosAutomovil: function(){
+              return true;
             },
             personalData: function () {
                 return (validateRequiredFields('#personal-data-container')) ? true : false;
