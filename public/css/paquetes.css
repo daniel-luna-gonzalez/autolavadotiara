@@ -24,7 +24,7 @@ and open the template in the editor.
 }
 
 .wizard {
-    margin: 20px auto;
+    margin: 0px auto;
     width: 70%;
     /*background: #fff;*/
 }
@@ -261,7 +261,11 @@ li.tab-paquete.active{
     background-color: #007bff;
 }
 
-@media (max-width: 320px){   
+@media (max-width: 320px){
+    section.background-donar div.wrapper-section {
+        padding-top: 80px;
+    }
+
     .donor-title h1{
         font-size: 2em;
     }

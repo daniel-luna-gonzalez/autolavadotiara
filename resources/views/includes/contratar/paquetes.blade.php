@@ -4,22 +4,22 @@
     </div>
     <div>
         <ul class="nav nav-pills" id="navPaquete">
-            <li class="active tab-paquete" data-target="#paquete1" data-toggle="tab" value="1">
+            <li class="active tab-paquete" data-target="#paquete1" nombre="paquete1" data-toggle="tab" value="1">
                 <span >Paquete 1</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete2" data-toggle="tab" value="2">
+            <li class="tab-paquete" data-target="#paquete2" nombre="paquete2" data-toggle="tab" value="2">
                 <span >Paquete 2</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete3"  data-toggle="tab" value="3">
+            <li class="tab-paquete" data-target="#paquete3" nombre="paquete3" data-toggle="tab" value="3">
                 <span >Paquete 3</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete4" data-toggle="tab" value="4">
+            <li class="tab-paquete" data-target="#paquete4" nombre="paquete4" data-toggle="tab" value="4">
                 <span >Paquete 4</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete5" data-toggle="tab" value="5">
+            <li class="tab-paquete" data-target="#paquete5" nombre="paquete5" data-toggle="tab" value="5">
                 <span >Paquete 5</span>
             </li>
-            <li class="tab-paquete" data-target="#paquete6" data-toggle="tab" value="6">
+            <li class="tab-paquete" data-target="#paquete6" nombre="paquete6" data-toggle="tab" value="6">
                 <span >Paquete 6</span>
             </li>
         </ul>
@@ -30,7 +30,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="paquete-servicios">1 Lavada Semanal</div>
-                    <div class="paquete-precio-servicio">  </div>
+                    <div class="paquete-precio-servicio" id="paquete1-price" >  </div>
                 </div>
             </div>
         </div>
@@ -38,6 +38,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div>2 Lavadas Semanales</div>
+                    <div class="paquete-precio-servicio" id="paquete2-price" >  </div>
                 </div>
             </div>
         </div>
@@ -46,6 +47,7 @@
                 <div class="panel-body">
                     <div>2 Lavadas Semanales</div>
                     <div>Baño de cera 1 vez a la quincena</div>
+                    <div class="paquete-precio-servicio" id="paquete3-price" >  </div>
                 </div>
             </div>
         </div>
@@ -54,6 +56,7 @@
                 <div class="panel-body">
                     <div>2 Lavadas Semanales</div>
                     <div>Baño de cera 1 vez a la semana</div>
+                    <div class="paquete-precio-servicio" id="paquete4-price" >  </div>
                 </div>
             </div>
         </div>
@@ -62,6 +65,7 @@
                 <div class="panel-body">
                     <div>2 Lavadas Semanales</div>
                     <div>Ecerado 1 vez a la quincena</div>
+                    <div class="paquete-precio-servicio" id="paquete5-price" >  </div>
                 </div>
             </div>
         </div>
@@ -70,6 +74,7 @@
                 <div class="panel-body">
                     <div>2 Lavadas Semanales</div>
                     <div>Encerado 1 vez a la semana</div>
+                    <div class="paquete-precio-servicio" id="paquete6-price" >  </div>
                 </div>
             </div>
         </div>

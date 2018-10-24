@@ -11,6 +11,71 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
         var CONEKTA_API_PUBLIC_KEY;
 
+        var paqueteConfig = {
+            paquete1: {
+                coche: {
+                    price: 240,
+                    priceFormat: '$240.00',
+                },
+                camioneta: {
+                    price: 300,
+                    priceFormat: '$300.00',
+                }
+            },
+            paquete2: {
+                coche: {
+                    price: 480,
+                    priceFormat: '$480.00',
+                },
+                camioneta: {
+                    price: 600,
+                    priceFormat: '$600.00',
+                }
+            },
+            paquete3: {
+                coche: {
+                    price: 630,
+                    priceFormat: '$630.00',
+                },
+                camioneta: {
+                    price: 800,
+                    priceFormat: '$800.00',
+                }
+            },
+            paquete4: {
+                coche: {
+                    price: 780,
+                    priceFormat: '$780.00',
+                },
+                camioneta: {
+                    price: 1000,
+                    priceFormat: '$1000.00',
+                }
+            },
+            paquete5: {
+                coche: {
+                    price: 980,
+                    priceFormat: '$980.00',
+                },
+                camioneta: {
+                    price: 1200,
+                    priceFormat: '$1200.00',
+                }
+            },
+            paquete6: {
+                coche: {
+                    price: 1480,
+                    priceFormat: '$1480.00',
+                },
+                camioneta: {
+                    price: 1900,
+                    priceFormat: '$1900.00',
+                }
+            }
+        }
+
+        this.vehicleSelected = 0;
+
         this.init = function (APP_HOST, APP_PORT, CONEKTA_API_PUBLIC_KEY_) {
             setConecktaSettings(CONEKTA_API_PUBLIC_KEY_);
 
@@ -144,10 +209,31 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             restoreDonorButton();
         };
 
-        var paqueteSelected = function(){
+        var setPricesToPackage = function(tipoAutomovil){
+            for(var key in paqueteConfig){
+                console.log(paqueteConfig[key][tipoAutomovil].priceFormat);
+               $('#'+key+'-price').append('<p>'+paqueteConfig[key][tipoAutomovil].priceFormat+'</p>');
+            }
+        }
+
+        var getVehicleTypeSelected = function(){
+            return this.vehicleSelected;
+        }
+
+        var setVehicleTypeSelected = function(selected){
+            this.vehicleSelected = selected;
+        }
+
+        var paqueteIdSelected = function(){
             var paqueteSelected = $('#navPaquete li.active').attr('value');
 
             return parseInt(paqueteSelected);
+        }
+
+        var paqueteSelectedString = function(){
+            var paqueteSelected = $('#navPaquete li.active').attr('nombre');
+
+            return paqueteSelected;
         }
 
         var restoreDonorButton = function () {
@@ -223,6 +309,8 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 $('.button-tipo-auto').removeClass('active');
                 $(button).addClass('active');
                 $('#tipoCocheSelected').text($(button).text());
+                setVehicleTypeSelected($(button).attr('value'));
+                setPricesToPackage($(button).attr('value'));
             });
         }
 
@@ -316,9 +404,9 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
         this.validate = {
             paqueteSeleccionado: function () {
-                var paquete = paqueteSelected();
+                var id = paqueteIdSelected();
 
-                if(!parseInt(paquete) > 0)
+                if(!parseInt(id) > 0)
                     return false;
 
                 return true;
