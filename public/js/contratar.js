@@ -16,30 +16,42 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 coche: {
                     price: 240,
                     priceFormat: '$240.00',
+                    lavadoSemana: 1,
+                    banoCera: 0
                 },
                 camioneta: {
                     price: 300,
                     priceFormat: '$300.00',
+                    lavadoSemana: 1,
+                    banoCera: 0
                 }
             },
             paquete2: {
                 coche: {
                     price: 480,
                     priceFormat: '$480.00',
+                    lavadoSemana: 2,
+                    banoCera: 0
                 },
                 camioneta: {
                     price: 600,
                     priceFormat: '$600.00',
+                    lavadoSemana: 2,
+                    banoCera: 0
                 }
             },
             paquete3: {
                 coche: {
                     price: 630,
                     priceFormat: '$630.00',
+                    lavadoSemana: 2,
+                    banoCera: 1
                 },
                 camioneta: {
                     price: 800,
                     priceFormat: '$800.00',
+                    lavadoSemana: 2,
+                    banoCera: 1
                 }
             },
             paquete4: {
@@ -210,9 +222,10 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
         };
 
         var setPricesToPackage = function(tipoAutomovil){
-            for(var key in paqueteConfig){
-                console.log(paqueteConfig[key][tipoAutomovil].priceFormat);
-               $('#'+key+'-price').append('<p>'+paqueteConfig[key][tipoAutomovil].priceFormat+'</p>');
+            for(var package in paqueteConfig){
+                console.log(paqueteConfig[package][tipoAutomovil].priceFormat);
+                $('#'+package+'-price').empty();
+                $('#'+package+'-price').append('<p>'+paqueteConfig[package][tipoAutomovil].priceFormat+'</p>');
             }
         }
 

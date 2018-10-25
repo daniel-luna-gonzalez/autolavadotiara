@@ -1,6 +1,6 @@
 <div >
     <div>
-        <h3>Seleccione su paquete para su <span id="tipoCocheSelected"></span></h3>
+        <h3>Seleccione un paquete para su <span id="tipoCocheSelected"></span></h3>
     </div>
     <div>
         <ul class="nav nav-pills" id="navPaquete">
@@ -25,7 +25,7 @@
         </ul>
     </div>
 
-    <div class="tab-content">
+    <div class="tab-content paquetes">
         <div class="tab-pane active" id="paquete1">
             <div class="panel panel-default">
                 <div class="panel-body">

@@ -177,7 +177,7 @@ span.round-tab:hover {
 .tab-content-wizard{
     display: inline-block;
     /*background-color: black;*/
-    background: rgba(0,0,0,0.75);
+    background: rgba(0,0,0,0.45);
     border-radius: 10px 10px;
     /*height: 100%;*/
     /*overflow-y: auto;*/
@@ -238,10 +238,9 @@ p.donacion-tab-title{
     from { -moz-transform: rotate(0deg);}
     to { -moz-transform: rotate(360deg);}
 }
-
-.table-paquete th:hover{
-    background-color: #8eb4cb;
-    color: #0d3625;
+.tab-content.paquetes .tab-pane .panel{
+    background-color: transparent;
+    border: none;
 }
 
 .paquete-servicios{
@@ -264,19 +263,28 @@ li.tab-paquete.active{
 .paquete-servicios{
     /*font-weight: bold;*/
     font-size: 1.2em;
-    color: #2b2b2b;
+    color: white;
 }
 
 .paquete-precio-servicio{
-    color: #4d4d4d;
-    /*font-weight: bold;*/
-    font-size: 1.2em;
+    color: #8eb4cb;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.donar-montos-info{
+    font-size: 0.7em;
+}
+
+.prev-step{
+    background-color: #007bff;
+}
+
+.next-step{
+    background-color: #007bff;
 }
 
 @media (max-width: 320px){
-    section.background-donar div.wrapper-section {
-        padding-top: 80px;
-    }
 
     .donor-title h1{
         font-size: 2em;

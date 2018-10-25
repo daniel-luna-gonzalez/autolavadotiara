@@ -9,7 +9,7 @@
             <ul class="nav nav-tabs ulwizard" role="tablist">
 
                 <li role="presentation" class="active">
-                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Selección de monto">
+                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Tipo de vehículo">
                                 <span class="round-tab">
                                     1
                                     <!--<i class="glyphicon glyphicon-folder-open"></i>-->
@@ -18,7 +18,7 @@
                 </li>
 
                 <li role="presentation" class="disabled" validate="paqueteSeleccionado">
-                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Causas">
+                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Selección de paquete">
                                 <span class="round-tab">
                                     2
                                     <!--<i class="glyphicon glyphicon-pencil"></i>-->
@@ -27,7 +27,7 @@
                 </li>
 
                 <li role="presentation" class="disabled" validate="datosAutomovil">
-                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Datos personales">
+                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Datos del vehículo">
                                 <span class="round-tab">
                                     3
                                     <!--<i class="glyphicon glyphicon-pencil"></i>-->
@@ -35,7 +35,7 @@
                     </a>
                 </li>
                 <li role="presentation" class="disabled" validate="personalData">
-                    <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Datos para el recibo">
+                    <a href="#step4" data-toggle="tab" aria-controls="step4" role="tab" title="Datos personales">
                                 <span class="round-tab">
                                     4
                                     <!--<i class="glyphicon glyphicon-picture"></i>-->
