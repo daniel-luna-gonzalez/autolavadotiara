@@ -1,4 +1,4 @@
-define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepicker', 'messages', 'paypal', 'alerts', 'Conekta', 'app', 'jquery-ui-datepicker', 'jquery-payform'], function ($, bt, bdialog, bdtp, message, paypal, alerts, conekta, app, datepicker, jquerypayform) {
+define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepicker', 'messages', 'paypal', 'alerts', 'Conekta', 'app', 'jquery-ui-datepicker', 'jquery-payform', 'daysOfWeekSelector'], function ($, bt, bdialog, bdtp, message, paypal, alerts, conekta, app, datepicker, jquerypayform, daysOfWeekSelector) {
     var Contratar = function () {
         /**
          * @description Modal Object of Credit Card Form
@@ -42,6 +42,20 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             },
             paquete3: {
                 coche: {
+                    price: 720,
+                    priceFormat: '$720.00',
+                    lavadoSemana: 3,
+                    banoCera: 1
+                },
+                camioneta: {
+                    price: 900,
+                    priceFormat: '$900.00',
+                    lavadoSemana: 3,
+                    banoCera: 1
+                }
+            },
+            paquete4: {
+                coche: {
                     price: 630,
                     priceFormat: '$630.00',
                     lavadoSemana: 2,
@@ -54,7 +68,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     banoCera: 1
                 }
             },
-            paquete4: {
+            paquete5: {
                 coche: {
                     price: 780,
                     priceFormat: '$780.00',
@@ -64,7 +78,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     priceFormat: '$1000.00',
                 }
             },
-            paquete5: {
+            paquete6: {
                 coche: {
                     price: 980,
                     priceFormat: '$980.00',
@@ -74,7 +88,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     priceFormat: '$1200.00',
                 }
             },
-            paquete6: {
+            paquete7: {
                 coche: {
                     price: 1480,
                     priceFormat: '$1480.00',
@@ -96,6 +110,9 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             $(document).ready(function () {
                 initWizard();
                 initSeleccionTipoAuto();
+                initDaysOfWeek();
+
+                $('.days-of-week').daysOfWeekInput();
 
                 $('#donor-birthday').datepicker({
                     changeMonth: true,
@@ -360,6 +377,10 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             return status;
         };
+
+        var initDaysOfWeek = function(){
+            daysOfWeekSelector.init();
+        }
 
         var addBlockErrorForm = function (input, errorType) {
             var errorMessage = getFormMessage(input, errorType);

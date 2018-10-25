@@ -27,8 +27,9 @@ require.config({
         'jquery.inputmask.date.extensions': 'apis/paymentInfo/assets/scripts/libs/jquery.inputmask.date.extensions',
         'app': 'apis/paymentInfo/assets/scripts/app',
         'jquery-ui-datepicker': 'apis/jquery-ui/jquery-ui',
-        'jquery-payform': 'apis/jquery-payform/js/jquery.payform.min'
-        
+        'jquery-payform': 'apis/jquery-payform/js/jquery.payform.min',
+        'daysOfWeekSelector': 'js/daysOfWeekSelector'
+
     },
     shim: {
         jquery: {
@@ -45,7 +46,8 @@ require.config({
         'jquery.inputmask': {"deps": ['modernizr','jquery']},
         'jquery.inputmask.date.extensions': {"deps": ['modernizr','jquery', 'jquery.inputmask']},
         'app': {"deps": ['modernizr', 'jquery', 'jquery.inputmask', 'jquery.inputmask.date.extensions']},
-        'donar': {"deps": ['jquery', 'Conekta', 'app']},
+        'donar': {"deps": ['jquery', 'Conekta', 'app', 'daysOfWeekSelector']},
+        'daysOfWeekSelector': {"deps": ['jquery']},
         "jquery.bxslider": {"deps": ["jquery"]},
         "scrolling": {"deps": ["jquery", "easing"]},
         "jquery-ui-datepicker": {"deps": ["jquery", "easing"]},

@@ -284,6 +284,31 @@ li.tab-paquete.active{
     background-color: #007bff;
 }
 
+/*
+ ---------------------------
+ */
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox] + label {
+    color: #ccc;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label {
+    color: #333;
+}
+
+.days
+> div {
+    display: inline;
+}
+
+/*
+------------------------------
+ */
 @media (max-width: 320px){
 
     .donor-title h1{

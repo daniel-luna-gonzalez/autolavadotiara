@@ -22,6 +22,9 @@
             <li class="tab-paquete" data-target="#paquete6" nombre="paquete6" data-toggle="tab" value="6">
                 <span >Paquete 6</span>
             </li>
+            <li class="tab-paquete" data-target="#paquete7" nombre="paquete7" data-toggle="tab" value="7">
+                <span >Paquete 7</span>
+            </li>
         </ul>
     </div>
 
@@ -50,10 +53,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="paquete-servicios">
-                        <p>2 Lavadas Semanales</p>
-                    </div>
-                    <div class="paquete-servicios">
-                        <p>Baño de cera 1 vez a la quincena</p>
+                        <p>3 Lavadas Semanales</p>
                     </div>
                     <div class="paquete-precio-servicio" id="paquete3-price" >  </div>
                 </div>
@@ -66,7 +66,7 @@
                         <p>2 Lavadas Semanales</p>
                     </div>
                     <div class="paquete-servicios">
-                        <p>Baño de cera 1 vez a la semana</p>
+                        <p>Baño de cera 1 vez a la quincena</p>
                     </div>
                     <div class="paquete-precio-servicio" id="paquete4-price" >  </div>
                 </div>
@@ -79,7 +79,7 @@
                         <p>2 Lavadas Semanales</p>
                     </div>
                     <div class="paquete-servicios">
-                        <p>Ecerado 1 vez a la quincena</p>
+                        <p>Baño de cera 1 vez a la semana</p>
                     </div>
                     <div class="paquete-precio-servicio" id="paquete5-price" >  </div>
                 </div>
@@ -92,9 +92,22 @@
                         <p>2 Lavadas Semanales</p>
                     </div>
                     <div class="paquete-servicios">
-                        <p>Encerado 1 vez a la semana</p>
+                        <p>Ecerado 1 vez a la quincena</p>
                     </div>
                     <div class="paquete-precio-servicio" id="paquete6-price" >  </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="paquete7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="paquete-servicios">
+                        <p>2 Lavadas Semanales</p>
+                    </div>
+                    <div class="paquete-servicios">
+                        <p>Encerado 1 vez a la semana</p>
+                    </div>
+                    <div class="paquete-precio-servicio" id="paquete7-price" >  </div>
                 </div>
             </div>
         </div>
