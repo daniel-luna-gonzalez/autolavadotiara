@@ -71,14 +71,14 @@
                     Se realizará un cargo automático a su tarjeta cada mes.
                 </div>
                 <div class="donar-warning-message col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    IMPORTANTE: El cargo aparecerá en tu estado de cuenta como CONEKTA***Autolavado Tiara
+                    IMPORTANTE: El cargo aparecerá en tu estado de cuenta como CONEKTA***Tiara Autolavado
                 </div>
             </div>
     </div>
     <div class="wrapper-pago-button">
         <div class="">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <button type="button" class="btn btn-info-full next-step donar-button-next" id="boton-donar">¡Hazlo realidad!</button>
+                <button type="button" class="btn btn-info-full next-step donar-button-next" id="boton-donar">¡Contratar!</button>
             </div>
         </div>
     </div>

@@ -71,7 +71,7 @@ class CreditCardPayment extends Main{
                             'unit_price' => $amount,
                             'quantity' => 1,
                             'category'    => 'Donación',
-                            'tags' => array('Camapaña', 'Donación', "Hazlo Realidad")
+                            'tags' => array("Tiara Autolavado")
                         )
                     ),
                     'currency' => 'mxn',
