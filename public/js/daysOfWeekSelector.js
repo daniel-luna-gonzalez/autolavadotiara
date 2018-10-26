@@ -90,7 +90,10 @@ define(['jquery'], function($){
                         if (($('.dayOfWeek[active="true"]').length === self.allowedDays) && !$(this).attr('checked')) {
                             $(this).prop("checked", false);
                             $(this).attr('active', 'false');
+                            desactivateLabel(index);
                             self.getSelected();
+                            desactivateLabel(index);
+
                             return 0;
                         }
 
