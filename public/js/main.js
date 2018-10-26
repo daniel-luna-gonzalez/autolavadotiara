@@ -49,6 +49,7 @@ require.config({
         'donar': {"deps": ['jquery', 'Conekta', 'app', 'daysOfWeekSelector']},
         'daysOfWeekSelector': {"deps": ['jquery']},
         "jquery.bxslider": {"deps": ["jquery"]},
+        "easing": {"deps": ["jquery"]},
         "scrolling": {"deps": ["jquery", "easing"]},
         "jquery-ui-datepicker": {"deps": ["jquery", "easing"]},
         'jquery-payform': {"deps": ["jquery"]}

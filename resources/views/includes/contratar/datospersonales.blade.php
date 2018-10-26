@@ -43,18 +43,6 @@
                         <input type="text" class="form-control required" id="donor-email" fieldType="email"  required-message="Ingresa tu email" error-message="Ingrese un email válido">
                     </div>
                 </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="checkbox">
-                        <label><input type="checkbox" id="donation-anon" name="apoyo-anonimo" value="1" >Quiero que mi apoyo sea anónimo</label>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <div class="checkbox">
-                        <label><input type="checkbox" id="fiscal-entity" name="recibo-deducible" value="1">Quiero recibo deducible donativo</label>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
