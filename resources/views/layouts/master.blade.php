@@ -13,12 +13,11 @@
     </body>
     <script>
         require(['main'], function() {
-            require(['jquery', 'bootstrap', 'creative', 'contratar', 'porquedonar', 'causas', 'contacto', 'bootstrap-dialog', "testimoniales"], function($, bt, scrollinNav, contratar, pd, causas, contacto, BootstrapDialog, T, donors) {
+            require(['jquery', 'bootstrap', 'creative', 'contratar', 'contacto', 'bootstrap-dialog'], function($, bt, scrollinNav, contratar, contacto, BootstrapDialog) {
                 contratar.init("<?php echo $APP_HOST ?>", "<?php echo $APP_PORT ?>", "<?php echo $CONEKTA_API_PUBLIC_KEY ?>");
                // pd.init();
                 //causas.init();
                 contacto.init("<?php echo $APP_HOST ?>", "<?php echo $APP_PORT ?>");
-                T.init();
             });
         });
     </script>
