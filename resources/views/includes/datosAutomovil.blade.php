@@ -53,7 +53,7 @@
         <input style="display: none" name="WorkWeek" class="form-control days-of-week" id="WorkWeek" type="text" value="" data-bind="value: WorkWeek">
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; margin-top: 15px;">
         <button type="button" class="btn btn-primary prev-step donar-button-next">Regresar</button>
         <button type="button" class="btn btn-primary next-step donar-button-next">Continuar</button>
     </div>
