@@ -101,6 +101,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
         }
 
         this.vehicleSelected = 0;
+        this.daysOfWeekWashCarInput;
 
         this.init = function (APP_HOST, APP_PORT, CONEKTA_API_PUBLIC_KEY_) {
             setConecktaSettings(CONEKTA_API_PUBLIC_KEY_);
@@ -112,7 +113,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 initSeleccionTipoAuto();
                 initDaysOfWeek();
 
-                $('.days-of-week').daysOfWeekInput();
+                self.daysOfWeekWashCarInput = $('#WorkWeek').daysOfWeekInput();
 
                 $('#donor-birthday').datepicker({
                     changeMonth: true,
@@ -124,6 +125,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
                     }
                 });
+
                 var clickEventType=((document.ontouchstart!==null)?'click':'touchstart');
 
                 $('#boton-donar').on(clickEventType, function () {
@@ -157,17 +159,23 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             });
 
             $(".next-step").click(function (e) {
-                var currentStep = $('.wizard-inner li.active').attr('validate');
+                var validateCurrentStep = $('.wizard-inner li.active').attr('validate');
+                var stepNumber = $('.wizard-inner li.active').index();
 
-                if(currentStep === undefined)
+                if(stepNumber === 1){
+                    self.daysOfWeekWashCarInput.setDaysLimit(paqueteConfig[paqueteSelectedString()][getVehicleTypeSelected()].lavadoSemana);
+                }
+
+
+                if(validateCurrentStep === undefined)
                     return wizardNextStep();
 
-                if (!self.validate[currentStep]())
+                if (!self.validate[validateCurrentStep]())
                     return 0;
 
                 wizardNextStep();
 
-                if (String(currentStep) === "personalData" && !$('#fiscal-entity').is(':checked')) {
+                if (String(validateCurrentStep) === "personalData" && !$('#fiscal-entity').is(':checked')) {
                     wizardNextStep();
                 }
             });
@@ -339,6 +347,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 $('.button-tipo-auto').removeClass('active');
                 $(button).addClass('active');
                 $('#tipoCocheSelected').text($(button).text());
+
                 setVehicleTypeSelected($(button).attr('value'));
                 setPricesToPackage($(button).attr('value'));
             });

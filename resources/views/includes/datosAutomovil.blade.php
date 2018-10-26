@@ -49,7 +49,7 @@
     </div>
 
     <div id="dias-lavado-container" class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-        <input name="WorkWeek" class="form-control days-of-week" id="WorkWeek" type="text" value=" M    S" data-bind="value: WorkWeek">
+        <input style="display: none" name="WorkWeek" class="form-control days-of-week" id="WorkWeek" type="text" value="" data-bind="value: WorkWeek">
     </div>
 
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">

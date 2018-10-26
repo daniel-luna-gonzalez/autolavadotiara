@@ -297,13 +297,18 @@ input[type=checkbox] + label {
     cursor: pointer;
 }
 
-input[type=checkbox]:checked + label {
-    color: #333;
-}
-
 .days
 > div {
     display: inline;
+}
+
+.week-days-control{
+    margin-top: 30px;
+    font-size: 1.2em;
+}
+
+.week-days-control label.active{
+    color: #007bff;
 }
 
 /*
