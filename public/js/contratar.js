@@ -163,7 +163,9 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 var stepNumber = $('.wizard-inner li.active').index();
 
                 if(stepNumber === 1){
-                    self.daysOfWeekWashCarInput.setDaysLimit(paqueteConfig[paqueteSelectedString()][getVehicleTypeSelected()].lavadoSemana);
+                    var availableDaysForWash = getPackageConfigSelected().lavadoSemana;
+                    $('#diasLavado').empty().html(availableDaysForWash)
+                    self.daysOfWeekWashCarInput.setDaysLimit(availableDaysForWash);
                 }
 
 
@@ -272,6 +274,10 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             var paqueteSelected = $('#navPaquete li.active').attr('nombre');
 
             return paqueteSelected;
+        }
+
+        var getPackageConfigSelected = function(){
+            return paqueteConfig[paqueteSelectedString()][getVehicleTypeSelected()];
         }
 
         var restoreDonorButton = function () {

@@ -303,7 +303,7 @@ input[type=checkbox] + label {
 }
 
 .week-days-control{
-    margin-top: 30px;
+    /*margin-top: 30px;*/
     font-size: 1.2em;
 }
 
