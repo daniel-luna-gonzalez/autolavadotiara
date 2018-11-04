@@ -8,30 +8,30 @@
 
 namespace App;
 use \Illuminate\Database\Eloquent\Model;
-
 /**
- * Description of FiscalEntity
+ * Description of Donors
  *
- * @author danielunag
+ * @author Daniel Luna <dluna>
  */
-class FiscalEntity extends Model
+class CustomerModel  extends Model
 {
-    protected $table = "fiscalEntity";
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        "idDonor",
-        "name",
-        "tax_id",
-        "street1",
-        "street2",
-        "street3",
-        "state",
-        "zip",
-        "city"
+        'idPlan', 
+        'idSubscription',
+        'idCustomer',
+        'token_card',
+        'name', 
+        'last_name', 
+        'mother_last_name' , 
+        'email', 
+        'birthday',
+        'phone',
+        "created_at"
     ];
 
     /**
@@ -42,4 +42,8 @@ class FiscalEntity extends Model
     protected $hidden = [
         
     ];
+
+    public function causes(){
+        return $this->belongsToMany("App\Causes", "causes_donor", "idDonor", "idCause");
+    }
 }

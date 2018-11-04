@@ -23,11 +23,6 @@ Route::get('/v1/test', function(Request $request) {
 });
 
 Route::group(['middleware' => 'cors'], function() {
-    Route::post('/v1/paypal/donate/create/', "api\\v1\paypal\Donate@create");
-    Route::get('/v1/paypal/billingPlan/index/', "api\\v1\paypal\BillingPlan@index");
-    Route::post('/v1/paypal/billingPlan/create', "api\\v1\paypal\BillingPlan@create");
-    Route::get('paypal/sample', "api\\v1\paypal\Donate@activaPayPalSample");
-    
     Route::post('/v1/conekta/suscripcionTarjeta/create', "api\\v1\conekta\SuscripcionTarjeta@create");
     Route::post('/v1/contacto', "api\\v1\ContactoController@index");
     Route::post('/v1/conekta/creditCardPayment', "api\\v1\conekta\CreditCardPayment@create");

@@ -9,20 +9,27 @@
 namespace App;
 use \Illuminate\Database\Eloquent\Model;
 /**
- * Description of CausesDonor
+ * Description of Donors
  *
  * @author Daniel Luna <dluna>
  */
-class CausesDonor extends Model{
-    protected $table = "causes_donor";
+class VehicleInformationModel  extends Model
+{
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'idDonor',
-        'idCause'
+        "Nocajon",
+        "color",
+        "depto",
+        "marca",
+        "modelo",
+        "nivelEstacionamiento",
+        "placas",
+        "vehicleType",
+        "washDays"
     ];
 
     /**

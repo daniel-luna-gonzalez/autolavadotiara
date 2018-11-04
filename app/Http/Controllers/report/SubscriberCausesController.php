@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\report;
 
 use App\Causes;
-use App\Donors;
+use App\CustomerModel;
 use Conekta\Conekta;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -42,7 +42,7 @@ class SubscriberCausesController extends Controller
     }
 
     private function getDataBetwenDates($idCause, $from = null, $until = null){
-        $query = Donors::select("*",
+        $query = CustomerModel::select("*",
             DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as created'),
             DB::raw("(TIMESTAMPDIFF(MONTH, suscription_created_at, now())+1) as antiquity"),
             DB::raw("(TIMESTAMPDIFF(MONTH, suscription_created_at, canceled_at)+1) as billing_period"),

@@ -3,7 +3,7 @@ namespace App\libraries;
 
 use App\Causes;
 use App\CausesDonor;
-use App\Donors;
+use App\CustomerModel;
 use App\Http\Controllers\api\v1\conekta\CreditCardPayment;
 use Conekta\ApiError;
 use Conekta\Conekta;
@@ -95,12 +95,12 @@ class SyncConekta
                 continue;
             }
 
-            $dbCustomer = Donors::where("email", $customerConekta->email)->first();
+            $dbCustomer = CustomerModel::where("email", $customerConekta->email)->first();
 
 
             if (is_null($dbCustomer)){
                 $dbCustomerData = $this->createUserDb($plan, $customerConekta);
-                $dbCustomer = Donors::create($dbCustomerData);
+                $dbCustomer = CustomerModel::create($dbCustomerData);
 
                 if (is_null($dbCustomer)){
                     echo $dbCustomerData["email"] . " no creado";

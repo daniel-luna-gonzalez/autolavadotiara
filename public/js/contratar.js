@@ -229,11 +229,11 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
          */
         var contratarPaquete = function (token) {
             console.log(token);
-
+            console.log({vehicle: getVehicleInformation(), customer: getCustomerParams(), card: getCardParams(), tokenCard: token});
             $.ajax({
                 url: APP_URL + "api/v1/conekta/suscripcionTarjeta/create",
                 type: "POST",
-                data: {vehicleData: getVehicleInformation(), customerData: getCustomerParams(), card: getCardParams(), tokenCard: token},
+                data: {vehicle: getVehicleInformation(), customer: getCustomerParams(), card: getCardParams(), tokenCard: token},
                 async: false,
                 success: function (response, textStatus, jqXHR) {
                     console.log("success");
@@ -257,7 +257,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
          */
         var setPricesToPackage = function(tipoAutomovil){
             for(var package in paqueteConfig){
-                console.log(paqueteConfig[package][tipoAutomovil].priceFormat);
                 $('#'+package+'-price').empty();
                 $('#'+package+'-price').append('<p>'+paqueteConfig[package][tipoAutomovil].priceFormat+'</p>');
             }
@@ -373,6 +372,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             $('#datosAutmovilForm').serializeArray().map(function(x){data[x.name] = x.value;});
 
+            data["vehicleType"] = getVehicleTypeSelected()
             data["washDays"] = getSelectedDaysForWashCar();
 
             console.log( data );

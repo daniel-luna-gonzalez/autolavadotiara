@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\report;
 
-use App\Donors;
+use App\CustomerModel;
 use App\Http\Controllers\api\v1\conekta\CreditCardPayment;
 use Conekta\ApiError;
 use Conekta\Conekta;
@@ -70,7 +70,7 @@ class SubscriberController extends Controller
     }
 
     private function getDataBetwenDates($from = null, $until = null){
-        $query = Donors::select("*",
+        $query = CustomerModel::select("*",
             DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as created'),
             DB::raw("(TIMESTAMPDIFF(MONTH, suscription_created_at, now())+1) as antiquity"),
             DB::raw("(TIMESTAMPDIFF(MONTH, suscription_created_at, canceled_at)+1) as billing_period"),
@@ -109,7 +109,7 @@ class SubscriberController extends Controller
         $customersConekta = Customer::where(["limit" => 200]);
 
         foreach ($customersConekta as $customerCustomer){
-            $customer = Donors::where("email", $customerConekta->email)->first();
+            $customer = CustomerModel::where("email", $customerConekta->email)->first();
             $customerConekta = $this->getUserFromConekta($customer->idCustomer);
 
             if(is_null($customerConekta))
@@ -163,13 +163,13 @@ class SubscriberController extends Controller
      */
     public function updateAmounts(Request $request){
         $ccp = new CreditCardPayment();
-        $customers = Donors::all();
+        $customers = CustomerModel::all();
 
         foreach ($customers as $cust){
             $plan = $ccp->getCustomerPlan($cust->idCustomer);
 
             if(is_object($plan)){
-                $localCust = Donors::where("id", $cust->id)->first();
+                $localCust = CustomerModel::where("id", $cust->id)->first();
 
                 if(is_object($localCust)){
                     $localCust->amount = (float) $plan->amount / 100;
@@ -219,11 +219,11 @@ class SubscriberController extends Controller
                 if (is_null($plan))
                     continue;
 
-                $dbCustomer = Donors::where("email", $customerConekta->email)->first();
+                $dbCustomer = CustomerModel::where("email", $customerConekta->email)->first();
 
                 if (is_null($dbCustomer)){
                     $dbCustomerData = $this->createUserDb($plan, $customerConekta);
-                    $dbCustomer = Donors::create($dbCustomerData);
+                    $dbCustomer = CustomerModel::create($dbCustomerData);
 
                     if (!is_null($dbCustomer))
                         echo "creado: $dbCustomer->email <br>";

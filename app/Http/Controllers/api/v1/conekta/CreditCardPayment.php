@@ -12,7 +12,7 @@ use Conekta\Customer;
 use Conekta\ErrorList;
 use Conekta\Error;
 use Conekta\Plan;
-use App\Donors;
+use App\CustomerModel;
 use App\CampaignDonor;
 use App\CampaignFiscalEntity;
 use App\Campaign;

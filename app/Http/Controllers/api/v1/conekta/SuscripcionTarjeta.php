@@ -13,50 +13,37 @@ namespace App\Http\Controllers\api\v1\conekta;
  *
  * @author Daniel Luna <dluna>
  */
+use App\Http\Requests\SubscriptionRequest;
 use Illuminate\Http\Request;
 use Conekta\Conekta;
 use Conekta\Customer;
 use Conekta\ErrorList;
 use Conekta\Error;
 use Conekta\Plan;
-use App\Donors;
-use App\CausesDonor;
-use App\FiscalEntity;
+use App\CustomerModel;
 use \Illuminate\Support\Facades\Mail;
 
-class SuscripcionTarjeta extends Main {
+class SuscripcionTarjeta {
 
-    public function __construct() {
-        $this->arrayCreate = [
-            "customer.name" => 'string|required|min:3',
-            'customer.last_name' => 'string|required|min:3',
-            'customer.mother_last_name' => 'string',
-            'customer.birthday' => '|required|string',
-            'customer.email' => 'string|required|email',
-            'customer.name' => 'string|required',
-            'customer.amount' => 'numeric|required'
-        ];
-
-        parent::__construct();
+    public function __construct()
+    {
     }
 
-    public function create(Request $request) {
-        Conekta::setApiKey(env("CONEKTA_API_PRIVATE_KEY"));
-        Conekta::setApiVersion("2.0.0");
-
-        echo "<pre>"; var_dump($request->all()); die();
-
-        if (($validate = $this->validate($request, $this->arrayCreate)) !== NULL)
-            return $validate;
-
+    public function create(SubscriptionRequest $request) {
         try {
+
+            Conekta::setApiKey(env("CONEKTA_API_PRIVATE_KEY"));
+            Conekta::setApiVersion("2.0.0");
+
+            echo "<pre>"; var_dump($request->all()); die();
+
             $amount = $request->input("card.amount");
 
             $customer = Customer::create(array(
 //                'id' => $request->input("donor.email"),
-                        "name" => $request->input("donor.name"),
-                        "email" => $request->input("donor.email"),
-                        "phone" => $request->input("donor.phone"),
+                        "name" => $request->input("customer.name"),
+                        "email" => $request->input("customer.email"),
+                        "phone" => $request->input("customer.phone"),
                         "payment_sources" => array(
                             array(
                                 "type" => "card",
@@ -87,13 +74,13 @@ class SuscripcionTarjeta extends Main {
                 $message->to($request->input("donor.email"), $request->input("donor.name"))->subject('Gracias por hacerlo realidad');
             });
 
-            if (Donors::where("email", $request->input("donor.email"))->count() == 0) {
-                $donor = Donors::create($insert);
+            if (CustomerModel::where("email", $request->input("donor.email"))->count() == 0) {
+                $donor = CustomerModel::create($insert);
                 $this->insertCauses($donor, $request->input("donor.causas"));
                 $this->insertFiscalEntity($donor, $request);
             }
 //
-            return response()->json(["status" => true]);
+            return response()->json(["status" => true, "message" => "Subscripción realizada con éxito"]);
         } catch (ErrorList $errorList) {
             foreach ($errorList->details as &$errorDetail) {
                 return response()->json(["status" => false, "message" => $errorDetail->getMessage()]);

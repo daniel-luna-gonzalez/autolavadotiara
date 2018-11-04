@@ -51,7 +51,7 @@
 
         <div id="dias-lavado-container" class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <label>Días disponibles para lavado: <span id="diasLavado"></span></label>
-            <input style="display: none" name="WorkWeek" class="form-control days-of-week" id="WorkWeek" type="text" value="" data-bind="value: WorkWeek">
+            <input style="display: none" class="form-control days-of-week" id="WorkWeek" type="text" value="" data-bind="value: WorkWeek">
             <span id="errorMessageDiasLavado" class="help-block with-errors block-error-donor" style="display:none;">Seleccione los días para lavado</span>
         </div>
     </form>

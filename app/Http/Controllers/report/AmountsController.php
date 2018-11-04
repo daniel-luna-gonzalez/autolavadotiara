@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\report;
 
 use App\Causes;
-use App\Donors;
+use App\CustomerModel;
 use App\libraries\Utils;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -63,7 +63,7 @@ class AmountsController extends Controller
     }
 
     private function getDataBetwenDates($from = null, $until = null){
-        $donors = Donors::with(["causes"]);
+        $donors = CustomerModel::with(["causes"]);
 
         if(Utils::validateDate($from, "Y/m/d") === true and !Utils::validateDate($until, "Y/m/d"))
             $donors->whereDate("created_at", ">=", $from);
