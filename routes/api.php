@@ -31,11 +31,7 @@ Route::group(['middleware' => 'cors'], function() {
     Route::post('/v1/conekta/suscripcionTarjeta/create', "api\\v1\conekta\SuscripcionTarjeta@create");
     Route::post('/v1/contacto', "api\\v1\ContactoController@index");
     Route::post('/v1/conekta/creditCardPayment', "api\\v1\conekta\CreditCardPayment@create");
-    Route::post('/v1/campaign/todosxuno/capture/add', "api\\v1\campaign\Todosxuno@captureAdd");
-    Route::post('/v1/campaign/todosxuno/capture/subs', "api\\v1\campaign\Todosxuno@captureSubs");
 
-    Route::get('/todosxuno/', "api\\v1\campaign\Todosxuno@index");
-    Route::post('/v1/campaign/todosxuno/share/fb/storeimage', "api\\v1\campaign\Todosxuno@storeimageFb");
     Route::post('/v1/donors/index', "api\\v1\\DonorsController@index");
 });
 

@@ -28,13 +28,13 @@ class SuscripcionTarjeta extends Main {
 
     public function __construct() {
         $this->arrayCreate = [
-            "donor.name" => 'string|required|min:3',
-            'donor.last_name' => 'string|required|min:3',
-            'donor.mother_last_name' => 'string',
-            'donor.birthday' => '|required|string',
-            'donor.email' => 'string|required|email',
-            'card.name' => 'string|required',
-            'card.amount' => 'numeric|required'
+            "customer.name" => 'string|required|min:3',
+            'customer.last_name' => 'string|required|min:3',
+            'customer.mother_last_name' => 'string',
+            'customer.birthday' => '|required|string',
+            'customer.email' => 'string|required|email',
+            'customer.name' => 'string|required',
+            'customer.amount' => 'numeric|required'
         ];
 
         parent::__construct();
@@ -43,6 +43,8 @@ class SuscripcionTarjeta extends Main {
     public function create(Request $request) {
         Conekta::setApiKey(env("CONEKTA_API_PRIVATE_KEY"));
         Conekta::setApiVersion("2.0.0");
+
+        echo "<pre>"; var_dump($request->all()); die();
 
         if (($validate = $this->validate($request, $this->arrayCreate)) !== NULL)
             return $validate;
@@ -64,7 +66,7 @@ class SuscripcionTarjeta extends Main {
             ));
 
 
-            $plan = $this->getPlan("HazloRealidad".(int)$amount);
+            $plan = $this->getPlan("Tiaraautolavado".(int)$amount);
 
             if(is_null($plan))
                 $plan = $this->createPlan($request);
@@ -135,8 +137,8 @@ class SuscripcionTarjeta extends Main {
             $amount = $request->input("card.amount");
 
             $plan = Plan::create(array(
-                "id" => "HazloRealidad".(int)$amount,
-                "name" => "HazloRealidad $ $amount",
+                "id" => "Tiaraautolavado".(int)$amount,
+                "name" => "Tiaraautolavado $ $amount",
                 "amount" => (float) $amount * 100,
                 "currency" => "MXN",
                 "interval" => "month"

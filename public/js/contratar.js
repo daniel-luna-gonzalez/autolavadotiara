@@ -115,7 +115,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
                 self.daysOfWeekWashCarInput = $('#WorkWeek').daysOfWeekInput();
 
-                $('#donor-birthday').datepicker({
+                $('#customer-birthday').datepicker({
                     changeMonth: true,
                     changeYear: true,
                     defaultDate: "-20y",
@@ -126,15 +126,15 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     }
                 });
 
-                var clickEventType=((document.ontouchstart!==null)?'click':'touchstart');
+                var clickEventType = getClickOrTouch();
 
-                $('#boton-donar').on(clickEventType, function () {
+                $('#boton-contratar').on(clickEventType, function () {
                     var span = $('<span>', {class: "glyphicon glyphicon-refresh glyphicon-refresh-animate"});
 
                     if (!validateCC())
                         return 0;
 
-                    $('#boton-donar').attr('disabled', 'disabled').append(span);
+                    $('#boton-contratar').attr('disabled', 'disabled').append(span);
                     createToken();
 
                 });
@@ -143,6 +143,10 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
             });
         };
+
+        var getClickOrTouch = function() {
+            return ((document.ontouchstart!==null)?'click':'touchstart');
+        }
 
         var initWizard = function () {
             //Initialize tooltips
@@ -162,6 +166,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 var validateCurrentStep = $('.wizard-inner li.active').attr('validate');
                 var stepNumber = $('.wizard-inner li.active').index();
 
+                /** set available days for wash in the calendar */
                 if(stepNumber === 1){
                     var availableDaysForWash = getPackageConfigSelected().lavadoSemana;
                     $('#diasLavado').empty().html(availableDaysForWash)
@@ -176,10 +181,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     return 0;
 
                 wizardNextStep();
-
-                if (String(validateCurrentStep) === "personalData" && !$('#fiscal-entity').is(':checked')) {
-                    wizardNextStep();
-                }
             });
 
             $(".prev-step").click(function (e) {
@@ -219,17 +220,20 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 //            if ($('#card-number').data('ccNumber') === undefined)
 //                return;
 
-            return Conekta.Token.create(tokenParams(), successResponseConekta, failedCreateToken);
+            return Conekta.Token.create(tokenParams(), contratarPaquete, failedCreateToken);
         };
 
-        var successResponseConekta = function (token) {
-            // Do something on sucess
-            // you need to send the token to the backend.
+        /**
+         * coneckta recurrent payment request
+         * @param token
+         */
+        var contratarPaquete = function (token) {
             console.log(token);
+
             $.ajax({
                 url: APP_URL + "api/v1/conekta/suscripcionTarjeta/create",
                 type: "POST",
-                data: {donor: getDonorParams(), card: getCardParams(), tokenCard: token},
+                data: {vehicleData: getVehicleInformation(), customerData: getCustomerParams(), card: getCardParams(), tokenCard: token},
                 async: false,
                 success: function (response, textStatus, jqXHR) {
                     console.log("success");
@@ -237,7 +241,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     if (response.status) {
                         // $('#text-amount').text("$" + amountSelected());
                         $('.wrapper-donar').hide();
-                        $('.donar-thanks-donor').show();
                     }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
@@ -248,6 +251,10 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             restoreDonorButton();
         };
 
+        /**
+         * set prices in each tab content
+         * @param tipoAutomovil
+         */
         var setPricesToPackage = function(tipoAutomovil){
             for(var package in paqueteConfig){
                 console.log(paqueteConfig[package][tipoAutomovil].priceFormat);
@@ -256,32 +263,52 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             }
         }
 
+        /**
+         *
+         * @returns {number|*}
+         */
         var getVehicleTypeSelected = function(){
             return this.vehicleSelected;
         }
 
+        /**
+         *
+         * @param selected
+         */
         var setVehicleTypeSelected = function(selected){
             this.vehicleSelected = selected;
         }
 
+        /**
+         * return package id
+         * @returns {Number}
+         */
         var paqueteIdSelected = function(){
             var paqueteSelected = $('#navPaquete li.active').attr('value');
 
             return parseInt(paqueteSelected);
         }
 
+        /**
+         * return package name f.e paquete1
+         * @returns {*|jQuery}
+         */
         var paqueteSelectedString = function(){
             var paqueteSelected = $('#navPaquete li.active').attr('nombre');
 
             return paqueteSelected;
         }
 
+        /**
+         * return package config from object
+         * @returns {*}
+         */
         var getPackageConfigSelected = function(){
             return paqueteConfig[paqueteSelectedString()][getVehicleTypeSelected()];
         }
 
         var restoreDonorButton = function () {
-            $('#boton-donar').attr('disabled', false).find('span').remove();
+            $('#boton-contratar').attr('disabled', false).find('span').remove();
         };
 
         var failedCreateToken = function (error) {
@@ -329,23 +356,29 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
         var getCardParams = function () {
             return {
-                amount: amountSelected(),
                 name: getFormValue('#card-name')
             };
         };
 
-        var getDonorParams = function () {
-            return {
-                name: getFormValue('#donor-name'),
-                "last_name": getFormValue('#donor-last-name'),
-                "mother_last_name": getFormValue('#donor-mother-last-name'),
-                phone: getFormValue('#donor-phone'),
-                email: getFormValue('#donor-email'),
-                birthday: getFormValue('#donor-birthday'),
-                fiscalEntity: ($('#fiscal-entity').is(":checked")) ? 1 : 0,
-                donationAnon: ($('#donation-anon').is(':checked')) ? 1 : 0
-            };
+        var getCustomerParams = function () {
+            var data = {};
+
+            $('#customerData').serializeArray().map(function(x){data[x.name] = x.value;});
+            console.log(data);
+            return data;
         };
+
+        var getVehicleInformation = function(){
+            var data = {};
+
+            $('#datosAutmovilForm').serializeArray().map(function(x){data[x.name] = x.value;});
+
+            data["washDays"] = getSelectedDaysForWashCar();
+
+            console.log( data );
+
+            return data ;
+        }
 
         var initSeleccionTipoAuto = function(){
             $('.button-tipo-auto').on('click', function(){
@@ -397,6 +430,21 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             daysOfWeekSelector.init();
         }
 
+        var getSelectedDaysForWashCar = function(){
+            return self.daysOfWeekWashCarInput.getSelected();
+        }
+
+        var validateDaysForWash = function(){
+            $('#errorMessageDiasLavado').hide();
+
+            if(getSelectedDaysForWashCar().length !== getPackageConfigSelected().lavadoSemana){
+                $('#errorMessageDiasLavado').show();
+                return false;
+            }
+
+            return true;
+        }
+
         var addBlockErrorForm = function (input, errorType) {
             var errorMessage = getFormMessage(input, errorType);
             var idErrorMessageContainer = input.attr("id") + "-" + errorType;
@@ -405,6 +453,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 return 0;
 
             alerts.addFormError(input);
+
             var helpBlock = $('<div>', {class: "help-block with-errors block-error-donor", id: idErrorMessageContainer}).append(errorMessage);
 
             helpBlock.insertAfter(input);
@@ -433,7 +482,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             },
             string: function (form) {
                 console.log("typeString");
-                var re = /[A-Za-z\s ]+$/;
+                var re = /[A-Za-z\s0-9]+$/;
                 var res = re.test(form.val());
                 return res;
             },
@@ -461,7 +510,8 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 return true;
             },
             datosAutomovil: function(){
-              return true;
+
+                return (validateRequiredFields('#datosAutomovil-data-container') & validateDaysForWash()) ? true : false;
             },
             personalData: function () {
                 return (validateRequiredFields('#personal-data-container')) ? true : false;

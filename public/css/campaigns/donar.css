@@ -278,17 +278,6 @@ button.donar-button-next:hover{
     color: #E95D7E;
 }
 
-.donar-thanks-donor{
-    display: none;
-}
-
-.donar-thanks-donor .donar-info{
-    color: #979796;
-}
-
-.donar-info .donar-info-gracias{
-    font-size: 3.6em;
-}
 
 .donar-share img{
     width:  60px;
@@ -309,12 +298,6 @@ button.donar-button-next:hover{
     padding-left: 10px;
     padding-right: 10px;
 }
-
-.donar-thanks-donor .donor-thanks-logo img{
-    width: 200px;
-    height: 200px;
-}
-
 
 .donar-info-hr-tu-tambien{
     color: white;
@@ -496,10 +479,6 @@ button.donar-button-next:hover{
         font-size: .6em;
         padding-left: 5px;
         padding-right: 5px;
-    }
-    .donar-thanks-donor .donor-thanks-logo img{
-        width: 120px;
-        height: 120px;
     }
 
     .donar-info-hr-tu-tambien h1{
@@ -772,10 +751,6 @@ button.donar-button-next:hover{
         font-size: .7em;
         padding-left: 5px;
         padding-right: 5px;
-    }
-    .donar-thanks-donor .donor-thanks-logo img{
-        width: 130px;
-        height: 130px;
     }
 
     .donar-info-hr-tu-tambien h1{

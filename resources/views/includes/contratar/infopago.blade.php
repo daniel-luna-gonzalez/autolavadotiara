@@ -78,7 +78,7 @@
     <div class="wrapper-pago-button">
         <div class="">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <button type="button" class="btn btn-info-full next-step donar-button-next" id="boton-donar">¡Contratar!</button>
+                <button type="button" class="btn btn-info-full next-step donar-button-next" id="boton-contratar">¡Contratar!</button>
             </div>
         </div>
     </div>

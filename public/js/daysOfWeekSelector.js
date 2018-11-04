@@ -45,20 +45,6 @@ define(['jquery'], function($){
                         }
                     ];
 
-                    // var currentDays = $field.val().split('');
-                    // for (var i = 0; i < currentDays.length; i++) {
-                    //     var dayA = currentDays[i];
-                    //     for (var n = 0; n < days.length; n++) {
-                    //         var dayB = days[n];
-                    //         // if (dayA === dayB.Value) {
-                    //         //     dayB.Checked = true;
-                    //         // }
-                    //     }
-                    // }
-
-                    // Make the field hidden when in production.
-                    //$field.attr('type','hidden');
-
                     var options = '';
                     var n = 0;
 
@@ -156,9 +142,10 @@ define(['jquery'], function($){
                         });
 
                         console.log(selected);
+
+                        return selected;
                     }
 
-                    console.log(this);
                     return this;
                 }
 
