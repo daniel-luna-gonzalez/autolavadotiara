@@ -23,7 +23,7 @@ Route::get('/v1/test', function(Request $request) {
 });
 
 Route::group(['middleware' => 'cors'], function() {
-    Route::post('/v1/conekta/suscripcionTarjeta/create', "api\\v1\conekta\SuscripcionTarjeta@create");
+    Route::post('/v1/conekta/suscripcionTarjeta/create', "api\\v1\conekta\SuscripcionTarjetaController@create");
     Route::post('/v1/contacto', "api\\v1\ContactoController@index");
     Route::post('/v1/conekta/creditCardPayment', "api\\v1\conekta\CreditCardPayment@create");
 

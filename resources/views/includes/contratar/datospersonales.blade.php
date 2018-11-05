@@ -26,7 +26,7 @@
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
                         <label>Apellido materno</label>
-                        <input type="text" class="form-control" name="mother-last-name" id="donor-mother-last-name" fieldType="string"  error-message="Ingrese un apellido válido">
+                        <input type="text" class="form-control" name="mother_last_name" id="donor-mother-last-name" fieldType="string"  error-message="Ingrese un apellido válido">
                     </div>
                 </div>
                 

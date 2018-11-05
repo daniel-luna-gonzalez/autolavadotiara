@@ -15,6 +15,7 @@ use \Illuminate\Database\Eloquent\Model;
  */
 class CustomerModel  extends Model
 {
+    protected $table = "customer";
     /**
      * The attributes that are mass assignable.
      *
@@ -22,6 +23,7 @@ class CustomerModel  extends Model
      */
     protected $fillable = [
         'idPlan', 
+        'conekta_customer_id',
         'idSubscription',
         'idCustomer',
         'token_card',
@@ -43,7 +45,4 @@ class CustomerModel  extends Model
         
     ];
 
-    public function causes(){
-        return $this->belongsToMany("App\Causes", "causes_donor", "idDonor", "idCause");
-    }
 }

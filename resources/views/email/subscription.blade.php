@@ -180,28 +180,26 @@
   <div class="container">
     <br>
     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
-      <img src="{{env("APP_HOST", "https://www.hazlorealidad.org")}}/media/images/mail/LogoM.png" class="title-logo">
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-lg-6 col-md-offset-3 col-lg-offset-3 text-center">
       <br>
-      <img src="{{env("APP_HOST", "https://www.hazlorealidad.org")}}/media/images/mail/BannerBlue.png" class="banner1">
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
-      <br>
-      <p class="message-title">Con tu apoyo mensual de {{ (isset($amount)) ? $amount : "" }} cambiaremos la vida de cientos de familias de nuestra comunidad</p>
+      <p class="message-title">Gracias por contratar tu {{ $package  }} que incluye: </p>
       <div class="message-info">
-        <p>Si pediste recibo deducible de donativo lo vas a recibir en tu correo en 5 días hábiles.</p>
         <br>
-        <p>En caso de no recibirlo por favor comunicate al 5596-9966 o escribenos al <a href="mailto:info@hazlorealidad.org" target="_top">info@hazlorealidad.org</a></p>
-        <br>
+        <p>@if(count(explode('|',$packageDescription)) > 0)</p>
+          @foreach(explode('|',$packageDescription) as $description)
+            <p>{{ $description }}</p>
+          @endforeach
+        @else
+          <p>{{ $packageDescription }}</p>
+        @endif
       </div>
 
-      <strong class="important-message">IMPORTANTE: El cargo aparecerá en tu estado de cuenta como CONEKTA***HAZLOREALIDAD</strong>
+      <p>Se te cobrará un cargo mensual de {{ $amount }}</p>
+      <strong class="important-message">IMPORTANTE: El cargo aparecerá en tu estado de cuenta como CONEKTA***TIARAAUTOLAVADO</strong>
 
     </div>
     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
       <br>
-      <img src="{{env("APP_HOST", "https://www.hazlorealidad.org")}}/media/images/mail/BannerMorado.png" class="banner2">
+{{--      <img src="{{env("APP_HOST", "https://www.hazlorealidad.org")}}/media/images/mail/BannerMorado.png" class="banner2">--}}
     </div>
 
     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
@@ -209,7 +207,7 @@
       <div class="banner-information">
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
           Correo: <br>
-          <strong>info@hazlorealidad.org</strong>
+          <strong>tiaraautolavado@gmail.com</strong>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
           Teléfono: <br>
@@ -219,7 +217,7 @@
     </div>
     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
       <div class="banner-information-site">
-          www.hazlorealidad.org
+          tiaraautolavado.com
       </div>
       <br>
     </div>
