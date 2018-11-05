@@ -11,6 +11,7 @@ namespace App\libraries;
 use App\Http\Requests\SubscriptionRequest;
 use App\PackageModel;
 use App\SubscriptionModel;
+use App\VehicleInformationModel;
 use Illuminate\Http\Request;
 use Conekta\Conekta;
 use Conekta\Customer as ConektaCustomer;
@@ -105,8 +106,14 @@ class SubscriptionLibrary
                 $subscriptionSuccess = true;
             }
 
-
             $localSubscription = SubscriptionModel::create($localSubscriptionParams);
+
+            $vehicleParams = $request->input("vehicle");
+
+            $vehicleParams["subscription_id"] = $localSubscription->id;
+            $vehicleParams["washDays"] = implode(",", $vehicleParams["washDays"]);
+
+            $vehicleInfo = VehicleInformationModel::create($vehicleParams);
 
             if($subscriptionSuccess){
                 Mail::send('email.subscription',
@@ -117,6 +124,18 @@ class SubscriptionLibrary
                     ],
                     function($message) use ($request, $customerEmail) {
                         $message->to($customerEmail, $request->input("customer.name"))->subject('Suscripción Tiara Autolavado');
+                    }
+                );
+
+                Mail::send('email.subscriptionNotify',
+                    [
+                        "messageContent" => "Hay un nuevo suscriptor para el $package->name ",
+                        "customer" => $localCustomer,
+                        "vehicle" => $vehicleInfo
+                    ],
+                    function($message) use ($request, $customerEmail, $package) {
+                        $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
+                            ->subject("Nueva suscripción $package->name");
                     }
                 );
             }else{
@@ -131,9 +150,10 @@ class SubscriptionLibrary
         } catch (Exception $e) {
             return response()->json(["status" => false, "message" => $e->getMessage()]);
         } catch (Conekta_Error $e) {
+            $this->log->info("Subscription Exception ConektaError".$e->getMessage(). " ".$e->getTraceAsString());
             return response()->json(["status" => false, "message" => $e->getMessage()]);
         }catch(\Exception $e){
-            $this->log->info("Subscription Exception ".$e->getMessage());
+            $this->log->info("Subscription Exception ".$e->getMessage(). " ".$e->getTraceAsString());
             return response()->json(["status" => false, "message" => "internal error"]);
         }
     }

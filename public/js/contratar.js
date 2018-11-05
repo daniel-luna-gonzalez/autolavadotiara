@@ -72,30 +72,36 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                 coche: {
                     price: 780,
                     priceFormat: '$780.00',
+                    lavadoSemana: 2,
                 },
                 camioneta: {
                     price: 1000,
                     priceFormat: '$1000.00',
+                    lavadoSemana: 2,
                 }
             },
             paquete6: {
                 coche: {
                     price: 980,
                     priceFormat: '$980.00',
+                    lavadoSemana: 2,
                 },
                 camioneta: {
                     price: 1200,
                     priceFormat: '$1200.00',
+                    lavadoSemana: 2,
                 }
             },
             paquete7: {
                 coche: {
                     price: 1480,
                     priceFormat: '$1480.00',
+                    lavadoSemana: 2,
                 },
                 camioneta: {
                     price: 1900,
                     priceFormat: '$1900.00',
+                    lavadoSemana: 2,
                 }
             }
         }
@@ -240,7 +246,9 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                     console.log(response);
                     if (response.status) {
                         // $('#text-amount').text("$" + amountSelected());
-                        $('.wrapper-donar').hide();
+                        $('.info-pago-wrapper').hide();
+                        $('.wrapper-thanks').show();
+
                     }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {

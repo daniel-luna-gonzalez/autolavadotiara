@@ -15,12 +15,14 @@ use \Illuminate\Database\Eloquent\Model;
  */
 class VehicleInformationModel  extends Model
 {
+    protected $table = "vehicleInformation";
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
+        "subscription_id",
         "Nocajon",
         "color",
         "depto",

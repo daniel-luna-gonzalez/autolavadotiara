@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="css/paquetes.css">
 {{--<link rel="stylesheet" href="css/donor-causes.css">--}}
 <link rel="stylesheet" href="css/contacto.css">
+<link rel="stylesheet" href="css/thanks.css">
 {{--<link rel="stylesheet" href="css/preguntas.css">--}}
 
 <link rel="stylesheet" type="text/css" href="apis/paymentInfo/assets/css/normalize.css">

@@ -65,7 +65,7 @@
             </div>
 
             <div class="tab-pane" role="tabpanel" id="step3">
-                @include('includes.datosAutomovil')
+                @include('includes.contratar.datosAutomovil')
             </div>
 
             <div class="tab-pane" role="tabpanel" id="step4">

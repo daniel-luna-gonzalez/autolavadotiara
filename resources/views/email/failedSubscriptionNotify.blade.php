@@ -184,13 +184,7 @@
       <p class="message-title">Gracias por contratar tu {{ $package  }} que incluye: </p>
       <div class="message-info">
         <br>
-        <p>@if(count(explode('|',$packageDescription)) > 0)</p>
-          @foreach(explode('|',$packageDescription) as $description)
-            <p>{{ $description }}</p>
-          @endforeach
-        @else
-          <p>{{ $packageDescription }}</p>
-        @endif
+        <p>
       </div>
 
       <p>Se te cobrará un cargo mensual de {{ $amount }}</p>
@@ -205,14 +199,14 @@
     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">
       <br>
       <div class="banner-information">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
           Correo: <br>
           <strong>tiaraautolavado@gmail.com</strong>
         </div>
-        {{--<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
           Teléfono: <br>
           <strong>5596-9966</strong>
-        </div>--}}
+        </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-6 col-lg-6 col-sm-offset-2 col-md-offset-3 col-lg-offset-3 text-center">

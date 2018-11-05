@@ -1,4 +1,4 @@
-<div class="wrapper-donor">
+<div class="wrapper-donor info-pago-wrapper">
     <div class="sub-wrapper text-left">
             <div id="payment-information-container" class="payment-information-container">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-left">
@@ -82,4 +82,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="wrapper-thanks">
+    Gracias por su contratación
 </div>
