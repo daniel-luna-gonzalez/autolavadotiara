@@ -139,7 +139,17 @@ class SubscriptionLibrary
                     }
                 );
             }else{
-
+                Mail::send('email.subscriptionNotify',
+                    [
+                        "messageContent" => "Hubo un intento de suscripción para el $package->name en la cual la tarjeta fue declinada.",
+                        "customer" => $localCustomer,
+                        "vehicle" => $vehicleInfo
+                    ],
+                    function($message) use ($request, $customerEmail, $package) {
+                        $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
+                            ->subject("Nueva suscripción $package->name");
+                    }
+                );
             }
 
             return response()->json(["status" => true, "message" => "Subscripción realizada con éxito"]);
