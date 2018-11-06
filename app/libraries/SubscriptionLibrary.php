@@ -150,7 +150,7 @@ class SubscriptionLibrary
                     ],
                     function($message) use ($request, $customerEmail, $package) {
                         $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
-                            ->subject("Nueva suscripción $package->name");
+                            ->subject("Suscripción declinada $package->name");
                     }
                 );
             }
