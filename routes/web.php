@@ -14,9 +14,13 @@ Route::get('/', function () {
     return view('index',  ["APP_HOST" => env("APP_HOST"), "APP_PORT" => env("APP_PORT") ,"CONEKTA_API_PUBLIC_KEY" => env("CONEKTA_API_PUBLIC_KEY")] );
 });
 
-Route::get("/google257379cc5af56db5.html", function(){
+/*Route::get("/google257379cc5af56db5.html", function(){
     View::addExtension('html', 'php');
     return view('google257379cc5af56db5', []);
+});*/
+
+Route::get('/terminosycondiciones', function(){
+    return view("includes.terminosycondiciones");
 });
 
 Route::get('/todosxuno/', "api\\v1\campaign\Todosxuno@index")->name('todosxuno');
