@@ -99,7 +99,10 @@ class SubscriptionLibrary
             $localSubscriptionParams['billing_cycle_start'] = $this->getDateFromUnifFormat($conektaSubscription['subscription_start']);
             $localSubscriptionParams['billing_cycle_end'] = $this->getDateFromUnifFormat($conektaSubscription['subscription_end']);
 
+            $localSubscriptionParams["subscribed"] = 0;
             $subscriptionSuccess = false;
+
+            $this->log->info("conektaStatusSubscription: ".$conektaSubscription["status"]);
 
             if(strcasecmp($conektaSubscription["status"], "active") == 0){
                 $localSubscriptionParams["subscribed"] = 1;
@@ -169,23 +172,7 @@ class SubscriptionLibrary
     }
 
     private function getDateFromUnifFormat($date){
-        return gmdate("Y-m-d H:i:s", $date);
-    }
-
-    private function insertFiscalEntity($donor, Request $request) {
-        if ($request->input("donor.fiscalEntity") != 1)
-            return 0;
-
-        $fiscalEntityData = $request->input("fiscalEntity");
-        $fiscalEntityData["idDonor"] = $donor->id;
-
-        FiscalEntity::create($fiscalEntityData);
-    }
-
-    private function insertCauses($donor, $causes) {
-        foreach ($causes as $cause) {
-            CausesDonor::create(array("idCause" => $cause['id'], "idDonor" => $donor->id));
-        }
+        return (!is_null($date)) ? gmdate("Y-m-d H:i:s", $date): NULL;
     }
 
     private function getPlan($id) {
