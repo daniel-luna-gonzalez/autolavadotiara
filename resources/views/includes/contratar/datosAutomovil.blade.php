@@ -31,7 +31,11 @@
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div class="form-group">
                 <label>Nivel de estacionamiento</label>
-                <input type="text" class="form-control required" name="nivelEstacionamiento" id="automovil-nivelEstacionamiento" fieldType="string" required-message="Nível de estacionamiento requerido" error-message="">
+                <select name="nivelEstacionamiento" class="form-control">
+                    <option value="10" selected>10</option>
+                    <option value="9">9</option>
+                    <option value="8">8</option>
+                </select>
             </div>
         </div>
 
