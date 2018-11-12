@@ -38,13 +38,10 @@
     Usted no puede declarar propiedad intelectual o exclusiva a ninguno de nuestros productos, modificado o sin modificar. Todos los productos son propiedad  de los proveedores del contenido. En caso de que no se especifique lo contrario, nuestros productos se proporcionan  sin ningún tipo de garantía, expresa o implícita. En ningún esta compañía será  responsables de ningún daño incluyendo, pero no limitado a, daños directos, indirectos, especiales, fortuitos o consecuentes u otras pérdidas resultantes del uso o de la imposibilidad de utilizar nuestros productos.
 
     POLÍTICA DE REEMBOLSO Y GARANTÍA
+    Tiaraautolavado.com ofrece la devolución de tu dinero en caso de que el servicio realizado en tu auto no sea de la calidad que prometemos. En caso de que esto suceda favor de mandar evidencias (Fotografías) al correo tiaraautolavado@gmail.com y por este medio nos encargaremos de reponerte el servicio sin costo
 
-    En el caso de productos que sean  mercancías irrevocables no-tangibles, no realizamos reembolsos después de que se envíe el producto, usted tiene la responsabilidad de entender antes de comprarlo.  Le pedimos que lea cuidadosamente antes de comprarlo. Hacemos solamente excepciones con esta regla cuando la descripción no se ajusta al producto. Hay algunos productos que pudieran tener garantía y posibilidad de reembolso pero este será especificado al comprar el producto. En tales casos la garantía solo cubrirá fallas de fábrica y sólo se hará efectiva cuando el producto se haya usado correctamente. La garantía no cubre averías o daños ocasionados por uso indebido. Los términos de la garantía están asociados a fallas de fabricación y funcionamiento en condiciones normales de los productos y sólo se harán efectivos estos términos si el equipo ha sido usado correctamente. Esto incluye:
-
-    – De acuerdo a las especificaciones técnicas indicadas para cada producto.
-    – En condiciones ambientales acorde con las especificaciones indicadas por el fabricante.
-    – En uso específico para la función con que fue diseñado de fábrica.
-    – En condiciones de operación eléctricas acorde con las especificaciones y tolerancias indicadas.
+    Derechos de desistimiento
+    Tienes garantizado por ley el derecho a desistir del contrato de compra, sin indicar el motivo. Solo manda un correo a Tiaraautolavado@gmail.com con el titulo Dar de baja el servicio y nosotros nos encargaremos del resto
 
     COMPROBACIÓN ANTIFRAUDE
 

@@ -23,6 +23,10 @@ Route::get('/terminosycondiciones', function(){
     return view("includes.terminosycondiciones");
 });
 
+Route::get('/politicadedevoluciones', function(){
+    return view("includes.politicadedevoluciones");
+});
+
 Route::get('/todosxuno/', "api\\v1\campaign\Todosxuno@index")->name('todosxuno');
 Route::post('/campaign/todosxuno/counter', "api\\v1\campaign\Todosxuno@counter");
 Route::get('/sharefb/', function(){
