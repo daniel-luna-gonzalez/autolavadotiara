@@ -26,6 +26,7 @@ Route::group(['middleware' => 'cors'], function() {
     Route::post('/v1/conekta/suscripcionTarjeta/create', "api\\v1\conekta\SuscripcionTarjetaController@create");
     Route::post('/v1/contacto', "api\\v1\ContactoController@index");
     Route::post('/v1/conekta/creditCardPayment', "api\\v1\conekta\CreditCardPayment@create");
+    Route::post('/v1/subscription/payment/register', "PaymentsController@register");
 
     Route::post('/v1/donors/index', "api\\v1\\DonorsController@index");
 });
