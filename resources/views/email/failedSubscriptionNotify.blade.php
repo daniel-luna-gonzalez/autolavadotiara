@@ -204,8 +204,6 @@
           <strong>tiaraautolavado@gmail.com</strong>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
-          Teléfono: <br>
-          <strong>5596-9966</strong>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@
 
 namespace App\libraries;
 
+use App\constants\DaysOfWeek;
 use App\Http\Requests\SubscriptionRequest;
 use App\PackageModel;
 use App\SubscriptionModel;
@@ -114,7 +115,7 @@ class SubscriptionLibrary
             $vehicleParams = $request->input("vehicle");
 
             $vehicleParams["subscription_id"] = $localSubscription->id;
-            $vehicleParams["washDays"] = implode(",", $vehicleParams["washDays"]);
+            $vehicleParams["washDays"] = $this->getWashDays($vehicleParams["washDays"]);
 
             $vehicleInfo = VehicleInformationModel::create($vehicleParams);
 
@@ -173,6 +174,25 @@ class SubscriptionLibrary
 
     private function getDateFromUnifFormat($date){
         return (!is_null($date)) ? gmdate("Y-m-d H:i:s", $date): NULL;
+    }
+
+    private function getWashDays($washDays){
+        $allowedDays = DaysOfWeek::DAYS;
+        $daysString = "";
+
+        if(count($washDays) > 0){
+            foreach($washDays as $day){
+                if(isset($allowedDays[$day])){
+                    $daysString.=$allowedDays[$day].", ";
+                }else{
+                    $daysString.="";
+                }
+            }
+        }else{
+            return "No se especificaron días";
+        }
+
+        return $daysString;
     }
 
     private function getPlan($id) {

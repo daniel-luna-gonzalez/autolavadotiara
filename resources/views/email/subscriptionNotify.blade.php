@@ -30,6 +30,7 @@
         <p>No cajón: {{ $vehicle->Nocajon  }}</p>
         <p>Depto: {{ $vehicle->depto  }}</p>
         <p>Nível de estacionamiento: {{ $vehicle->nivelEstacionamiento  }}</p>
+        <p>Días de lavado: {{ $vehicle->washDays  }}</p>
 
         {{--<p>Días de lavado: {{ $vehicle->washDays  }}</p>--}}
       </div>
