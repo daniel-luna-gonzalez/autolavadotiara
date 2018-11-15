@@ -31,6 +31,7 @@
         <p>Depto: {{ $vehicle->depto  }}</p>
         <p>Nível de estacionamiento: {{ $vehicle->nivelEstacionamiento  }}</p>
         <p>Días de lavado: {{ $vehicle->washDays  }}</p>
+        <p>Tipo de servicio: {{ $vehicle->serviceType  }}</p>
 
         {{--<p>Días de lavado: {{ $vehicle->washDays  }}</p>--}}
       </div>

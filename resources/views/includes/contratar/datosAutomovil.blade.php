@@ -58,6 +58,16 @@
             <input style="display: none" class="form-control days-of-week" id="WorkWeek" type="text" value="" data-bind="value: WorkWeek">
             <span id="errorMessageDiasLavado" class="help-block with-errors block-error-donor" style="display:none;">Seleccione los días para lavado</span>
         </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="form-group">
+                <label>Lavado:</label>
+                <select name="serviceType" class="form-control">
+                    <option value="Por fuera" selected>Por fuera</option>
+                    <option value="Por dentro y por fuera">Por dentro y por fuera</option>
+                </select>
+            </div>
+        </div>
     </form>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; margin-top: 15px;">
         <button type="button" class="btn btn-primary prev-step donar-button-next">Regresar</button>
