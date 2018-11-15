@@ -92,6 +92,8 @@ class SubscriptionLibrary
             );
 
             $localSubscriptionParams['idPlan'] = $plan['id'];
+            $localSubscriptionParams['package_id'] = $package->id;
+            $localSubscriptionParams['amount'] = $amount;
             $localSubscriptionParams['token_card'] = $request->input("tokenCard.id");
             $localSubscriptionParams['idCustomer'] = $conektaCustomer['id'];
             $localSubscriptionParams['idSubscription'] = $conektaSubscription['id'];

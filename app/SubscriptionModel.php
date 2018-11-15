@@ -15,6 +15,7 @@ class SubscriptionModel extends Model
      */
     protected $fillable = [
         "customer_id",
+        "package_id",
         "idPlan",
         "idSubscription",
         "token_card",

@@ -19,7 +19,8 @@ class Subscription extends Migration
 
             $table->increments('id');
 
-            $table->integer('customer_id');
+            $table->unsignedInteger('customer_id');
+            $table->unsignedInteger('package_id');
 
             $table->string('idPlan')->nullable();           //conekta
             $table->string('idSubscription')->nullable();   //conekta
