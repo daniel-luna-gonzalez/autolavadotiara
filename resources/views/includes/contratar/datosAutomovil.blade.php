@@ -68,6 +68,9 @@
                 </select>
             </div>
         </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-info" style="font-size: .8em; color: white;">
+            <strong>*NO NOS HACEMOS RESPONSABLES POR OBJETOS PERDIDOS.</strong>
+        </div>
     </form>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; margin-top: 15px;">
         <button type="button" class="btn btn-primary prev-step donar-button-next">Regresar</button>
