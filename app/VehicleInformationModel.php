@@ -31,7 +31,8 @@ class VehicleInformationModel  extends Model
         "nivelEstacionamiento",
         "placas",
         "vehicleType",
-        "washDays"
+        "washDays",
+        "serviceType"
     ];
 
     /**
