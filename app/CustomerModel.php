@@ -45,4 +45,8 @@ class CustomerModel  extends Model
         
     ];
 
+    public function subscription(){
+        return $this->hasMany(SubscriptionModel::class, "customer_id", "id");
+    }
+
 }

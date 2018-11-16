@@ -37,4 +37,16 @@ class SubscriptionModel extends Model
     protected $hidden = [
 
     ];
+
+    public function customer(){
+        return $this->hasOne(CustomerModel::class, "id", "customer_id");
+    }
+
+    public function package(){
+        return $this->hasOne(PackageModel::class, "id", "package_id");
+    }
+
+    public function vehicle(){
+        return $this->hasOne(VehicleInformationModel::class, "subscription_id", "id");
+    }
 }
