@@ -50,6 +50,7 @@ class SubscriptionController extends Controller
                         $row["Departamento"] = $vehicle->depto;
                         $row["Nivel Estacionamiento"] = $vehicle->nivelEstacionamiento;
                         $row["Tipo Servicio"] = $vehicle->serviceType;
+                        $row["Horario"] = $vehicle->horario;
 
                         //$row["Antigüedad"] = ($subscription["status"]) ? $subscription["antiquity"] : $subscription["billing_period"];
                         //$row["Activo"] = $subscriber["status"] ? "Si" : "No";

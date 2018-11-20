@@ -32,7 +32,8 @@ class VehicleInformationModel  extends Model
         "placas",
         "vehicleType",
         "washDays",
-        "serviceType"
+        "serviceType",
+        "horario"
     ];
 
     /**

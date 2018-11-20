@@ -68,6 +68,23 @@
                 </select>
             </div>
         </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="form-group">
+                <label>Horario:</label>
+                <select name="horario" class="form-control">
+                    <option value="5:00 am" selected>5:00 am</option>
+                    <option value="6:00 am">6:00 am</option>
+                    <option value="7:00 am">7:00 am</option>
+                    <option value="8:00 am">8:00 am</option>
+                    <option value="9:00 am">9:00 am</option>
+                    <option value="8:00 pm">8:00 pm</option>
+                    <option value="9:00 pm">9:00 pm</option>
+                    <option value="10:00 pm">10:00 pm</option>
+                    <option value="11:00 pm">11:00 pm</option>
+                    <option value="12:00 am">12:00 am</option>
+                </select>
+            </div>
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-info" style="font-size: .8em; color: white;">
             <strong>*NO NOS HACEMOS RESPONSABLES POR OBJETOS PERDIDOS.</strong>
         </div>
