@@ -266,7 +266,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
         var setPricesToPackage = function(tipoAutomovil){
             for(var package in paqueteConfig){
                 $('#'+package+'-price').empty();
-                $('#'+package+'-price').append('<p>'+paqueteConfig[package][tipoAutomovil].priceFormat+'</p>');
+                $('#'+package+'-price').append('<p>'+paqueteConfig[package][tipoAutomovil].priceFormat+' mensual</p>');
             }
         }
 
