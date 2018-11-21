@@ -32,6 +32,7 @@ class VehicleInformation extends Migration
             $table->string('vehicleType')->nullable();
             $table->string('washDays')->nullable();
             $table->string('serviceType')->nullable();
+            $table->string('horario')->nullable();
 
             $table->timestamps();
         });

@@ -29,8 +29,8 @@ class ContactoController extends Controller {
                 "messageText" => $request->get('message'),
                 "subject" => $request->input('subject')
                     ], function($message) use ($request) {
-                $to = env("CONTACTO_EMAIL", "info@hazlorealidad.org");
-                $message->to($to, "Contacto Hazlo Realidad")->subject('Contacto Hazlo Realidad :: ' . $request->input("subject"));
+                $to = env("CONTACTO_EMAIL", "tiaraautolavado@gmail.com");
+                $message->to($to, "Contacto Tiara Autolavado")->subject('Contacto Tiara Autolavado :: ' . $request->input("subject"));
             });
 
             ContactInfo::create($request->all());
