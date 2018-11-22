@@ -35,7 +35,7 @@ class SubscriptionRequest extends FormRequest
             'vehicle.color'                 => 'string|required',
             'vehicle.placas'                => 'string|required',
             "vehicle.nivelEstacionamiento"  => 'string|required',
-            'vehicle.Nocajon'               => 'string|required',
+            'vehicle.Nocajon'               => 'string',
             'vehicle.depto'                 => 'string|required',
             'vehicle.vehicleType'           => 'string|required',
             'vehicle.washDays'              => 'array'

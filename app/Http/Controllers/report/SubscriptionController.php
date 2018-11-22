@@ -41,7 +41,7 @@ class SubscriptionController extends Controller
                         $row["Fecha de registro"] = $subscription->created_at;
                         $row["Paquete"] = $package->name;
                         $row["Dias Lavado"] = $vehicle->washDays;
-                        $row["No cajon"] = $vehicle->Nocajon;
+//                        $row["No cajon"] = $vehicle->Nocajon;
                         $row["Tipo Vehiculo"] = $vehicle->vehicleType;
                         $row["marca"] = $vehicle->marca;
                         $row["modelo"] = $vehicle->modelo;
