@@ -39,12 +39,12 @@
             </div>
         </div>
 
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-            <div class="form-group">
-                <label>Número de cajón</label>
-                <input type="text" class="form-control required" name="Nocajon" id="automovil-Nocajon" fieldType="string" required-message="No cajón requerido" error-message="Número de cajón inválido">
-            </div>
-        </div>
+        {{--<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">--}}
+            {{--<div class="form-group">--}}
+                {{--<label>Número de cajón</label>--}}
+                {{--<input type="text" class="form-control required" name="Nocajon" id="automovil-Nocajon" fieldType="string" required-message="No cajón requerido" error-message="Número de cajón inválido">--}}
+            {{--</div>--}}
+        {{--</div>--}}
 
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
             <div class="form-group">

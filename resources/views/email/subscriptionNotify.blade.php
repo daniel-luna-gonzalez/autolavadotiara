@@ -27,7 +27,7 @@
         <p>Placas: {{ $vehicle->placas  }}</p>
         <p>Tipo de vehículo: {{ $vehicle->vehicleType  }}</p>
         <p>Color: {{ $vehicle->color  }}</p>
-        <p>No cajón: {{ $vehicle->Nocajon  }}</p>
+        {{--<p>No cajón: {{ $vehicle->Nocajon  }}</p>--}}
         <p>Depto: {{ $vehicle->depto  }}</p>
         <p>Nível de estacionamiento: {{ $vehicle->nivelEstacionamiento  }}</p>
         <p>Días de lavado: {{ $vehicle->washDays  }}</p>
