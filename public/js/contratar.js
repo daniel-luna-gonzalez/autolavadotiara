@@ -381,7 +381,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             $('#datosAutmovilForm').serializeArray().map(function(x){data[x.name] = x.value;});
 
             data["vehicleType"] = getVehicleTypeSelected();
-            data["packageCode"] = paqueteSelectedString();
+            data["packageCode"] = paqueteSelectedString() + getVehicleTypeSelected();
             data["washDays"] = getSelectedDaysForWashCar();
 
             console.log( data );
