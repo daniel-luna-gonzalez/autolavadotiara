@@ -77,6 +77,9 @@ class SubscriptionLibrary
                     )
                 ));
 
+                $this->log->info('coneckta customer');
+                $this->log->info($conektaCustomer);
+
                 $localCustomer->conekta_customer_id = $conektaCustomer["id"];
                 $localCustomer->save();
 //            }
@@ -91,6 +94,9 @@ class SubscriptionLibrary
                     'plan' => $plan['id']
                 )
             );
+
+            $this->log->info('coneckta suscription response');
+            $this->log->info($conektaSubscription);
 
             $localSubscriptionParams['idPlan'] = $plan['id'];
             $localSubscriptionParams['package_id'] = $package->id;
@@ -159,6 +165,8 @@ class SubscriptionLibrary
                 return response()->json(["status" => false, "message" => $errorDetail->getMessage()]);
             }
         } catch (Exception $e) {
+            $this->log->error($e->getMessage());
+            $this->log->error($e->getTraceAsString());
             return response()->json(["status" => false, "message" => $e->getMessage()]);
         } catch (Conekta_Error $e) {
             $this->log->info("Subscription Exception ConektaError".$e->getMessage(). " ".$e->getTraceAsString());

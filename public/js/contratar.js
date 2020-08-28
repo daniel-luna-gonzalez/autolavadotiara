@@ -244,6 +244,8 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
                         $('.info-pago-wrapper').hide();
                         $('.wrapper-thanks').show();
 
+                    } else {
+                        message.error('Error', 'Hubo un error al procesar su suscripción.' . response.message)
                     }
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
