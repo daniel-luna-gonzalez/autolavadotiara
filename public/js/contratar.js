@@ -5,9 +5,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
          * @type string
          */
         var self = this;
-        var APP_URL = null;
-
-        var conektaLiveMode = false;
 
         var CONEKTA_API_PUBLIC_KEY;
 
@@ -111,8 +108,6 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
 
         this.init = function (APP_HOST, APP_PORT, CONEKTA_API_PUBLIC_KEY_) {
             setConecktaSettings(CONEKTA_API_PUBLIC_KEY_);
-
-            APP_URL = APP_HOST + ":" + APP_PORT + "/";
 
             $(document).ready(function () {
                 initWizard();
@@ -237,7 +232,7 @@ define(['jquery', 'bootstrap-toggle', 'bootstrap-dialog', 'bootstrap-datetimepic
             console.log(token);
             console.log({vehicle: getVehicleInformation(), customer: getCustomerParams(), card: getCardParams(), tokenCard: token});
             $.ajax({
-                url: APP_URL + "api/v1/conekta/suscripcionTarjeta/create",
+                url:  "api/v1/conekta/suscripcionTarjeta/create",
                 type: "POST",
                 data: {vehicle: getVehicleInformation(), customer: getCustomerParams(), card: getCardParams(), tokenCard: token},
                 async: false,

@@ -10,6 +10,7 @@ namespace App\libraries;
 
 use App\constants\DaysOfWeek;
 use App\Http\Requests\SubscriptionRequest;
+use App\OrdersModel;
 use App\PackageModel;
 use App\SubscriptionModel;
 use App\VehicleInformationModel;
@@ -58,16 +59,16 @@ class SubscriptionLibrary
 
             $amount = $package->price;
 
-            if(!is_null($localCustomer->conekta_customer_id)){
-                $conektaCustomer = ConektaCustomer::find($localCustomer->conekta_customer_id);
-            }else {
+//            if(!is_null($localCustomer->conekta_customer_id)) {
+//                $conektaCustomer = ConektaCustomer::find($localCustomer->conekta_customer_id);
+//            }else {
 
 //            if($conektaCustomer->total === 0)
                 $conektaCustomer = ConektaCustomer::create(array(
                     //                'id' => $request->input("donor.email"),
                     "name" => $request->input("customer.name"),
                     "email" => $customerEmail,
-                    "phone" => $request->input("customer.phone"),
+//                    "phone" => $request->input("customer.phone"),
                     "payment_sources" => array(
                         array(
                             "type" => "card",
@@ -78,7 +79,7 @@ class SubscriptionLibrary
 
                 $localCustomer->conekta_customer_id = $conektaCustomer["id"];
                 $localCustomer->save();
-            }
+//            }
 
             $plan = $this->getPlan("Tiaraautolavado".$package->code);
 
@@ -107,7 +108,7 @@ class SubscriptionLibrary
 
             $this->log->info("conektaStatusSubscription: ".$conektaSubscription["status"]);
 
-            if(strcasecmp($conektaSubscription["status"], "active") == 0){
+            if(strcasecmp($conektaSubscription["status"], "active") == 0) {
                 $localSubscriptionParams["subscribed"] = 1;
                 $subscriptionSuccess = true;
             }
@@ -121,41 +122,35 @@ class SubscriptionLibrary
 
             $vehicleInfo = VehicleInformationModel::create($vehicleParams);
 
-            if($subscriptionSuccess){
-                Mail::send('email.subscription',
-                    [
-                        "amount" => "$" . $amount,
-                        "packageDescription" => $package->description,
-                        "package" => $package->name,
-                    ],
-                    function($message) use ($request, $customerEmail) {
-                        $message->to($customerEmail, $request->input("customer.name"))->subject('Suscripción Tiara Autolavado');
-                    }
-                );
+            $subscriptionParams = [
+                'idDonor' => $localCustomer->id,
+                'amount' => $amount,
+                'idConekta' => null,
+                'cardToken' => $request->input("tokenCard.id"),
+                'plan_id' => $plan['id'],
+                'subscription_id' => $conektaSubscription['id'], // Crea la subscripción pero no significa que se haya hecho el cobro
+                'subscription_status' => $conektaSubscription['status']
+            ];
 
-                Mail::send('email.subscriptionNotify',
-                    [
-                        "messageContent" => "Hay un nuevo suscriptor para el $package->name ",
-                        "customer" => $localCustomer,
-                        "vehicle" => $vehicleInfo
-                    ],
-                    function($message) use ($request, $customerEmail, $package) {
-                        $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
-                            ->subject("Nueva suscripción $package->name");
-                    }
-                );
-            }else{
-                Mail::send('email.subscriptionNotify',
-                    [
-                        "messageContent" => "Hubo un intento de suscripción para el $package->name en la cual la tarjeta fue declinada.",
-                        "customer" => $localCustomer,
-                        "vehicle" => $vehicleInfo
-                    ],
-                    function($message) use ($request, $customerEmail, $package) {
-                        $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
-                            ->subject("Suscripción declinada $package->name");
-                    }
-                );
+            $this->log->info($subscriptionParams);
+
+            $order = OrdersModel::create($subscriptionParams);
+
+            if($subscriptionSuccess) {
+                try {
+                    $this->sendEmail($amount, $package, $request, $customerEmail, $localCustomer, $vehicleInfo);
+                } catch (\Exception $e) {
+                    $this->log->error($e->getMessage());
+                    $this->log->error($e->getTraceAsString());
+                }
+
+            } else{
+                try {
+                    $this->sendEmailAttempt($package, $localCustomer, $vehicleInfo, $request, $customerEmail);
+                } catch (\Exception $e) {
+                    $this->log->error($e->getMessage());
+                    $this->log->error($e->getTraceAsString());
+                }
             }
 
             return response()->json(["status" => true, "message" => "Subscripción realizada con éxito"]);
@@ -172,6 +167,60 @@ class SubscriptionLibrary
             $this->log->info("Subscription Exception ".$e->getMessage(). " ".$e->getTraceAsString());
             return response()->json(["status" => false, "message" => "internal error"]);
         }
+    }
+
+    /**
+     * @param $amount
+     * @param $package
+     * @param $request
+     * @param $customerEmail
+     * @param $localCustomer
+     * @param $vehicleInfo
+     */
+    private function sendEmail($amount, $package, $request, $customerEmail, $localCustomer, $vehicleInfo) {
+        Mail::send('email.subscription',
+            [
+                "amount" => "$" . $amount,
+                "packageDescription" => $package->description,
+                "package" => $package->name,
+            ],
+            function($message) use ($request, $customerEmail) {
+                $message->to($customerEmail, $request->input("customer.name"))->subject('Suscripción Tiara Autolavado');
+            }
+        );
+
+        Mail::send('email.subscriptionNotify',
+            [
+                "messageContent" => "Hay un nuevo suscriptor para el $package->name ",
+                "customer" => $localCustomer,
+                "vehicle" => $vehicleInfo
+            ],
+            function($message) use ($request, $customerEmail, $package) {
+                $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
+                    ->subject("Nueva suscripción $package->name");
+            }
+        );
+    }
+
+    /**
+     * @param $package
+     * @param $localCustomer
+     * @param $vehicleInfo
+     * @param $request
+     * @param $customerEmail
+     */
+    private function sendEmailAttempt($package, $localCustomer, $vehicleInfo, $request, $customerEmail) {
+        Mail::send('email.subscriptionNotify',
+            [
+                "messageContent" => "Hubo un intento de suscripción para el $package->name en la cual la tarjeta fue declinada.",
+                "customer" => $localCustomer,
+                "vehicle" => $vehicleInfo
+            ],
+            function($message) use ($request, $customerEmail, $package) {
+                $message->to(env('MAIL_SUBSCRIPTION_NOTIFICATION_TO'), 'Tiara Autolavado')
+                    ->subject("Suscripción declinada $package->name");
+            }
+        );
     }
 
     private function getDateFromUnifFormat($date){
